@@ -45,82 +45,61 @@ public class LikertScaleStrategy extends LinearLayout implements View.OnClickLis
 		buttons = new ArrayList<ToggleButton>();
 
 		//--A1--
-		String label = "A1";
+		String label = "-2";
 		ToggleButton button = new ToggleButton(ctxt);
 		button.setTextColor(Color.TRANSPARENT);
 		button.setText(label);
 		button.setTextOn(label);
 		button.setTextOff(label);
-		button.setBackgroundResource(R.drawable.purple_likert_button_a1);
+		button.setBackgroundResource(R.drawable.purple_likert_button_minusminus);
 		button.setOnClickListener(this);
 		addView(button);
 		buttons.add(button);
 		//--A2--
-		label = "A2";
+		label = "-1";
 		button = new ToggleButton(ctxt);
 		button.setTextColor(Color.TRANSPARENT);
 		button.setText(label);
 		button.setTextOn(label);
 		button.setTextOff(label);
-		button.setBackgroundResource(R.drawable.purple_likert_button_a2);
+		button.setBackgroundResource(R.drawable.purple_likert_button_minus);
 		button.setOnClickListener(this);
 		addView(button);
 		buttons.add(button);
 		//--A3--
-		label = "A3";
+		label = "0";
 		button = new ToggleButton(ctxt);
 		button.setTextColor(Color.TRANSPARENT);
 		button.setTextOn(label);
 		button.setText(label);
 		button.setTextOff(label);
-		button.setBackgroundResource(R.drawable.purple_likert_button_a3);
+		button.setBackgroundResource(R.drawable.purple_likert_button_neutral);
 		button.setOnClickListener(this);
 		addView(button);
 		buttons.add(button);
 		//--B1--
-		label = "B1";
+		label = "1";
 		button = new ToggleButton(ctxt);
 		button.setTextColor(Color.TRANSPARENT);
 		button.setText(label);
 		button.setTextOn(label);
 		button.setTextOff(label);
-		button.setBackgroundResource(R.drawable.purple_likert_button_b1);
+		button.setBackgroundResource(R.drawable.purple_likert_button_plus);
 		button.setOnClickListener(this);
 		addView(button);
 		buttons.add(button);
 		//--B2--
-		label = "B2";
+		label = "2";
 		button = new ToggleButton(ctxt);
 		button.setTextColor(Color.TRANSPARENT);
 		button.setText(label);
 		button.setTextOn(label);
 		button.setTextOff(label);
-		button.setBackgroundResource(R.drawable.purple_likert_button_b2);
+		button.setBackgroundResource(R.drawable.purple_likert_button_plusplus);
 		button.setOnClickListener(this);
 		addView(button);
 		buttons.add(button);
-		//--B3--
-		label = "B3";
-		button = new ToggleButton(ctxt);
-		button.setTextColor(Color.TRANSPARENT);
-		button.setText(label);
-		button.setTextOn(label);
-		button.setTextOff(label);
-		button.setBackgroundResource(R.drawable.purple_likert_button_b3);
-		button.setOnClickListener(this);
-		addView(button);
-		buttons.add(button);
-		//--B4--
-		label = "B4";
-		button = new ToggleButton(ctxt);
-		button.setTextColor(Color.TRANSPARENT);
-		button.setText(label);
-		button.setTextOn(label);
-		button.setTextOff(label);
-		button.setBackgroundResource(R.drawable.purple_likert_button_b4);
-		button.setOnClickListener(this);
-		addView(button);
-		buttons.add(button);
+		
 	}
 
 	/**
