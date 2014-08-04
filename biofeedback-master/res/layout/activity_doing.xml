@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".DoingActivity" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.36"
+        android:text="Everyone has stress.  There are lots of healthy ways to manage stress, but not all of them will be right for you.  This is a menu of different options for coping with stress—some you will have tried, some not—some will work for you, some not.  " />
+
+    <Button
+        android:id="@+id/buttonStrengthReminders"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:enabled="true"
+        android:onClick="startStrengthReminders"
+        android:text="Strength Reminders"
+        android:width="270dp" />
+
+    <Button
+        android:id="@+id/ButtonInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:enabled="true"
+        android:onClick="startInformation"
+        android:text="@string/title_activity_information"
+        android:width="270dp" />
+
+    <Button
+        android:id="@+id/ButtonBreathingRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:enabled="true"
+        android:onClick="startBreathingRate"
+        android:text="@string/title_activity_breathing_rate"
+        android:width="270dp" />
+
+    <Button
+        android:id="@+id/ButtonHeartRate"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:onClick="startHeartRate"
+        android:text="@string/title_activity_heart_rate"
+        android:width="270dp" />
+
+    <Button
+        android:id="@+id/ButtonSkinTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:enabled="true"
+        android:onClick="startSkinTemp"
+        android:text="@string/title_activity_skin_temperature"
+        android:width="270dp" />
+
+    <Button
+        android:id="@+id/ButtonMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:enabled="true"
+        android:onClick="startMusic"
+        android:text="@string/title_activity_music"
+        android:width="270dp" />
+   
+
+</LinearLayout>
