@@ -18,6 +18,11 @@
     <string name="welcome_text_part2_top">.. or do some recommended exercises.</string>
 
     <!-- assessment -->
+    <string name="assessment1">Resources and Strengths</string>
+    <string name="assessment2">Stress Management</string>
+    <string name="assessment3">Strategies</string>
+    <string name="assessment4">Destress</string>
+    <string name="assessment5">Healthy Choices</string>
     <string name="physical_subheading">Physical</string>
     <string name="intellectual_subheading">Intellectual</string>
     <string name="social_subheading">Social</string>
@@ -111,19 +116,7 @@
     <string name="assessment_text_rate">For each of the following areas, rate yourself on a scale of 1 to 5.</string>
     <string name="assessment_heading1">Stress Management</string>
     <string name="assessment_text1">Everyone has stress.  There are lots of healthy ways to manage stress, but not all of them will be right for you.  This is a menu of different options for coping with stress—some you will have tried, some not—some will work for you, some not.  For now, just go through and rate each option, to create your personalized menu of stress busters.</string>
-    <string name="strategy_assessment_text_rate">For each item, rate the following:
-\nHave you ever tried this?
-\n1. No, never have [go to A:]
-\nA:  
-\nA1. Not interested—not something I’d ever do
-\nA2. Maybe I would try this
-\nA3. Definitely interested in trying this out
-\n2. Yes [go to B:]
-\nB:
-\nB1. Yes, this definitely works for me
-\nB2. Yes, I’d  do this and it might help some
-\nB3. Not sure—I doubt it would help me
-\nB4. Definitely not—tried it and it didn’t work, or I just know I wouldn’t do it</string>
+    <string name="strategy_assessment_text_rate">Everyone has stress.  There are lots of healthy ways to manage stress, but not all of them will be right for you.  This is a menu of different options for coping with stress—some you will have tried, some not—some will work for you, some not.  For now, just go through and rate each option, to create your personalized menu of stress busters.</string>
     <string name="title_activity_strength_reminders">Strength Reminders</string>
 
 </resources>

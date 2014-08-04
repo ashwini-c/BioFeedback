@@ -13,7 +13,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     -->
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -22,65 +22,67 @@
         android:orientation="vertical" >
 
         <Button
-            android:id="@+id/buttonResources"
+            android:id="@+id/ButtonInformation"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/purple_button"
-            android:onClick="startAssessment1"
-            android:text="@string/assessment1"
-            android:textColor="@color/white" />
-
-        <Button
-            android:id="@+id/buttonStress"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonResources"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/purple_button"
-            android:onClick="startAssessment2"
-            android:singleLine="false"
-            android:text="@string/assessment2"
+            android:enabled="true"
+            android:onClick="startInformation"
+            android:text="@string/title_activity_information"
             android:textColor="@color/white"
             android:width="270dp" />
 
         <Button
-            android:id="@+id/buttonSubheadingStrategies"
+            android:id="@+id/ButtonBreathingRate"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonStress"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/purple_button"
-            android:onClick="startAssessment3"
-            android:text="@string/assessment3"
-            android:textColor="@color/white" />
+            android:enabled="true"
+            android:onClick="startBreathingRate"
+            android:text="@string/title_activity_breathing_rate"
+            android:textColor="@color/white"
+            android:width="270dp" />
 
         <Button
-            android:id="@+id/buttonSubheadingDistress"
+            android:id="@+id/ButtonHeartRate"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonSubheadingStrategies"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/purple_button"
-            android:onClick="startAssessment4"
-            android:text="@string/assessment4"
-            android:textColor="@color/white" />
+            android:onClick="startHeartRate"
+            android:text="@string/title_activity_heart_rate"
+            android:textColor="@color/white"
+            android:width="270dp" />
 
         <Button
-            android:id="@+id/buttonSubheadingHealthy"
+            android:id="@+id/ButtonSkinTemp"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonSubheadingDistress"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/purple_button"
-            android:onClick="startAssessment5"
-            android:text="@string/assessment5"
+            android:enabled="true"
+            android:onClick="startSkinTemp"
+            android:text="@string/title_activity_skin_temperature"
+            android:textColor="@color/white"
+            android:width="270dp" />
+
+        <Button
+            android:id="@+id/ButtonMusic"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/purple_button"
+            android:enabled="true"
+            android:onClick="startMusic"
+            android:text="@string/title_activity_music"
             android:textColor="@color/white" />
-    </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>

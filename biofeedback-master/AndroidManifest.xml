@@ -37,6 +37,11 @@
             android:label="@string/title_activity_self_assessment"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
         </activity>
+        <activity
+            android:name="nz.ac.waikato.isdb.assessment.SelfAssessmentActivityResources"
+            android:label="@string/assessment1"
+            android:parentActivityName="nz.ac.waikato.isdb.assessment.SelfAssessmentActivity" >
+        </activity>
         <!-- Self assessment -->
         <activity
             android:name="nz.ac.waikato.isdb.assessment.SelfAssessmentPhysicalActivity"
@@ -86,6 +91,12 @@
             android:name="nz.ac.waikato.isdb.DoingActivity"
             android:label="@string/title_activity_doing"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
+            >
+        </activity>
+        <activity
+            android:name="nz.ac.waikato.isdb.DoingActivityOthers"
+            android:label="@string/title_activity_doing"
+            android:parentActivityName="nz.ac.waikato.isdb.DoingActivity" >
             >
         </activity>
         <activity

@@ -16,17 +16,39 @@ import android.widget.TextView;
 import nz.ac.waikato.isdb.R;
 import nz.ac.waikato.isdb.StressActivity;
 
-public class SelfAssessmentActivity extends Activity {
-
+public class SelfAssessmentActivityResources extends Activity {
+	int totalQues = 42;
+	SharedPreferences pref;
+	int total = 0;
+	ProgressBar progressBar ;
+	TextView txt;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_self_assessment);
+		setContentView(R.layout.activity_self_assessment_resources);
+		progressBar = (ProgressBar)findViewById(R.id.progressBar1);
+		txt = (TextView)findViewById(R.id.textPercent);
 		// Show the Up button in the action bar.
 		//setupActionBar();
 	}
 
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		total = 0;
+		pref = getSharedPreferences("physical", MODE_PRIVATE);
+		total = total + pref.getInt("total", 0);
+		pref = getSharedPreferences("intellectual", MODE_PRIVATE);
+		total = total + pref.getInt("total", 0);
+		pref = getSharedPreferences("individual", MODE_PRIVATE);
+		total = total + pref.getInt("total", 0);
+		pref = getSharedPreferences("social", MODE_PRIVATE);
+		total = total + pref.getInt("total", 0);
+		progressBar.setProgress(total);
+		txt.setText(total+"/"+totalQues);
+	}
 	/**
 	 * Set up the {@link android.app.ActionBar}, if the API is available.
 	 */
@@ -61,21 +83,18 @@ public class SelfAssessmentActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	public void startAssessment1(View view) {
-		startActivity(new Intent(this, SelfAssessmentActivityResources.class));
+	public void startSelfAssessmentPhysical(View view) {
+		startActivity(new Intent(this, SelfAssessmentPhysicalActivity.class));
 	}
-	public void startAssessment2(View view) {
-		startActivity(new Intent(this, StressActivity.class));
+	public void startSelfAssessmentIntellectual(View view) {
+		startActivity(new Intent(this, SelfAssessmentIntellectualActivity.class));
 	}
-	public void startAssessment3(View view) {
-		//startActivity(new Intent(this, SelfAssessmentSocialActivity.class));
+	public void startSelfAssessmentSocial(View view) {
+		startActivity(new Intent(this, SelfAssessmentSocialActivity.class));
 	}
-	public void startAssessment4(View view) {
-		//startActivity(new Intent(this, SelfAssessmentIndividualActivity.class));
+	public void startSelfAssessmentIndividual(View view) {
+		startActivity(new Intent(this, SelfAssessmentIndividualActivity.class));
 	}
-	public void startAssessment5(View view) {
-		Intent nextActivity = new Intent(this, StressActivity.class);
-		//startActivity(nextActivity);
-	}
+	
 
 }

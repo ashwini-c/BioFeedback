@@ -10,12 +10,12 @@ import nz.ac.waikato.isdb.heart.HeartRateActivity;
 import nz.ac.waikato.isdb.music.MusicActivity;
 import nz.ac.waikato.isdb.skin.SkinTempActivity;
 
-public class DoingActivity extends Activity {
+public class DoingActivityOthers extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_doing);
+		setContentView(R.layout.activity_doing_other);
 	}
 
 	@Override
@@ -25,20 +25,30 @@ public class DoingActivity extends Activity {
 		return true;
 	}
 
-
-
-	public void startOthers(View view) {
-		Intent nextActivity = new Intent(this, DoingActivityOthers.class);
+	public void startBreathingRate(View view) {
+		Intent nextActivity = new Intent(this, BreathingRateActivity.class);
 		startActivity(nextActivity);
 	}
 
-	public void startStressReminders(View view) {
-		// Intent nextActivity = new Intent(this, InformationActivity.class);
-		//startActivity(nextActivity);
-	}
-
-	public void startStrengthReminders(View view) {
-		Intent nextActivity = new Intent(this, StrengthReminderActivity.class);
+	public void startHeartRate(View view) {
+		Intent nextActivity = new Intent(this, HeartRateActivity.class);
 		startActivity(nextActivity);
 	}
+
+	public void startMusic(View view) {
+		Intent nextActivity = new Intent(this, MusicActivity.class);
+		startActivity(nextActivity);
+	}
+
+	public void startSkinTemp(View view) {
+		Intent nextActivity = new Intent(this, SkinTempActivity.class);
+		startActivity(nextActivity);
+	}
+
+	public void startInformation(View view) {
+		Intent nextActivity = new Intent(this, InformationActivity.class);
+		startActivity(nextActivity);
+	}
+
+
 }
