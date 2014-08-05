@@ -45,7 +45,7 @@ public class LikertScaleStrategy extends LinearLayout implements View.OnClickLis
 		buttons = new ArrayList<ToggleButton>();
 
 		//--A1--
-		String label = "-2";
+		String label = "1";
 		ToggleButton button = new ToggleButton(ctxt);
 		button.setTextColor(Color.TRANSPARENT);
 		button.setText(label);
@@ -56,7 +56,7 @@ public class LikertScaleStrategy extends LinearLayout implements View.OnClickLis
 		addView(button);
 		buttons.add(button);
 		//--A2--
-		label = "-1";
+		label = "2";
 		button = new ToggleButton(ctxt);
 		button.setTextColor(Color.TRANSPARENT);
 		button.setText(label);
@@ -67,7 +67,7 @@ public class LikertScaleStrategy extends LinearLayout implements View.OnClickLis
 		addView(button);
 		buttons.add(button);
 		//--A3--
-		label = "0";
+		label = "3";
 		button = new ToggleButton(ctxt);
 		button.setTextColor(Color.TRANSPARENT);
 		button.setTextOn(label);
@@ -78,7 +78,7 @@ public class LikertScaleStrategy extends LinearLayout implements View.OnClickLis
 		addView(button);
 		buttons.add(button);
 		//--B1--
-		label = "1";
+		label = "4";
 		button = new ToggleButton(ctxt);
 		button.setTextColor(Color.TRANSPARENT);
 		button.setText(label);
@@ -89,7 +89,7 @@ public class LikertScaleStrategy extends LinearLayout implements View.OnClickLis
 		addView(button);
 		buttons.add(button);
 		//--B2--
-		label = "2";
+		label = "5";
 		button = new ToggleButton(ctxt);
 		button.setTextColor(Color.TRANSPARENT);
 		button.setText(label);

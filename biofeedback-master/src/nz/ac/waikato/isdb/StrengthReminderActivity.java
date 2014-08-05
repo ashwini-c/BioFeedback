@@ -9,6 +9,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 
 import nz.ac.waikato.isdb.ui.LikertScale;
@@ -82,6 +83,7 @@ public class StrengthReminderActivity extends Activity {
 			j++;
 		}
 		sortedLike = sortByValues(like);
+		sortedLike = getHighRatedValues(sortedLike);
 		pref = getSharedPreferences("mode", MODE_PRIVATE);
 		visibility = pref.getInt("mode", 0);
 
@@ -143,8 +145,11 @@ public class StrengthReminderActivity extends Activity {
 	public void setRandom()
 	{
 
+		Random       random    = new Random();
+		ArrayList numbers = new ArrayList(); 
 		int k =1;
 		t1.setText("");
+		int       randomKey =-1;
 		Set set = sortedLike.entrySet();
 		Iterator iterator2 = set.iterator();
 		while(iterator2.hasNext()) {
@@ -162,9 +167,31 @@ public class StrengthReminderActivity extends Activity {
 				else
 				{
 					t1.setText(t1.getText()+ " \n"+k+": "+reminderText[(Integer) me2.getKey()]);
-					Log.d("ashwini key",me2.getKey() + ": ");
-					Log.d("ashwini value"," "+ me2.getValue());
+
 					k=k+1;
+
+					List<Integer> keys      = new ArrayList<Integer>(sortedLike.keySet());
+					if(k==1)
+					{
+						randomKey = keys.get( random.nextInt(keys.size()) );
+
+					}
+					else{
+						randomKey = keys.get( random.nextInt(keys.size()) );
+						while(true)
+						{
+							if(numbers.contains(randomKey))
+								randomKey = keys.get( random.nextInt(keys.size()) );
+							else{
+								numbers.add(randomKey);
+								break;
+							}
+						}
+					}
+					int       value     = sortedLike.get(randomKey);
+					Log.d("ashwiniii key",randomKey + ": ");
+					Log.d("ashwiniii value"," "+ value);
+
 				}
 			}
 			else{
@@ -174,6 +201,20 @@ public class StrengthReminderActivity extends Activity {
 
 		}
 	}
+	private HashMap getHighRatedValues(HashMap map)
+	{
+		HashMap rated = new LinkedHashMap();
+		Set set = sortedLike.entrySet();
+		for (Iterator it = set.iterator(); it.hasNext();) {
+			Map.Entry entry = (Map.Entry) it.next();
+			if((Integer)(entry.getValue()) != -1)
+				rated.put(entry.getKey(), entry.getValue());
+			else
+				break;
+		} 
+		return rated;
+	}
+
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void onResume() {

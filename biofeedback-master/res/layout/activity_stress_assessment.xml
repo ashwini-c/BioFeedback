@@ -63,6 +63,12 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp" />
 
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
             <TextView
                 android:id="@+id/textText2"
                 android:layout_width="match_parent"
@@ -81,6 +87,11 @@
                 android:orientation="horizontal"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp" />
+            <ListView
+                android:id="@+id/listView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
 
             <TextView
                 android:id="@+id/textText3"
@@ -138,6 +149,11 @@
                 android:orientation="horizontal"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp" />
+            <ListView
+                android:id="@+id/listView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
 
             <TextView
                 android:id="@+id/textText6"
@@ -461,6 +477,11 @@
                 android:orientation="horizontal"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp" />
+            <ListView
+                android:id="@+id/listView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
 
             <TextView
                 android:id="@+id/textText23"
