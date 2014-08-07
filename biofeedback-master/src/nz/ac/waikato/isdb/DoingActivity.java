@@ -33,8 +33,8 @@ public class DoingActivity extends Activity {
 	}
 
 	public void startStressReminders(View view) {
-		// Intent nextActivity = new Intent(this, InformationActivity.class);
-		//startActivity(nextActivity);
+		Intent nextActivity = new Intent(this, StressReminderActivity.class);
+		startActivity(nextActivity);
 	}
 
 	public void startStrengthReminders(View view) {

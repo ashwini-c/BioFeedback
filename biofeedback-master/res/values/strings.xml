@@ -70,6 +70,32 @@
     <string name="individual_question_14"><b>Stewardship:</b> Do you use what you have wisely, not wasting resources of whatever sort? </string>
     <string name="individual_question_15"><b>Thankfulness:</b> Do you recognise and appreciate what you have, and the good things in the world around you?</string>
     <string name="individual_question_16"><b>Organisation:</b> Are you good at making plans, keeping things in order and keeping track of the events and objects of your life?</string>
+    <string name="stress_question_1"><b>Exercise: </b> How do you feel about it? </string>
+    <string name="stress_question_2"><b>Mini-break: </b> How do you feel about it? </string>
+    <string name="stress_question_3"><b>Biofeedback: </b> How do you feel about it? </string>
+    <string name="stress_question_4"><b>Journaling: </b> How do you feel about it? </string>
+    <string name="stress_question_5"><b>Music:  </b> How do you feel about it? </string>
+    <string name="stress_question_6"><b>Guided imagery:  </b> How do you feel about it? </string>
+    <string name="stress_question_7"><b>Body scan:  </b> How do you feel about it? </string>
+    <string name="stress_question_8"><b>Stretching: </b> How do you feel about it? </string>
+    <string name="stress_question_9"><b>Relaxation breathing: </b> How do you feel about it? </string>
+    <string name="stress_question_10"><b>Meditation:  </b> How do you feel about it? </string>
+    <string name="stress_question_11"><b>Prayer:</b> How do you feel about it? </string>
+    <string name="stress_question_12"><b>Massage: </b> How do you feel about it? </string>
+    <string name="stress_question_13"><b>Yoga: </b> How do you feel about it? </string>
+    <string name="stress_question_14"><b>Gardening: </b> How do you feel about it? </string>
+    <string name="stress_question_15"><b>Laughter: </b> How do you feel about it? </string>
+    <string name="stress_question_16"><b>Reading: </b> How do you feel about it? </string>
+    <string name="stress_question_17"><b>Make a list: </b> How do you feel about it? </string>
+    <string name="stress_question_18"><b>Call a friend: </b> How do you feel about it? </string>
+    <string name="stress_question_19"><b>Take a bath:</b> How do you feel about it? </string>
+    <string name="stress_question_20"><b>Play: </b> How do you feel about it? </string>
+    <string name="stress_question_21"><b>Go outside: </b> How do you feel about it? </string>
+    <string name="stress_question_22"><b>Feed yourself: </b> How do you feel about it? </string>
+    <string name="stress_question_23"><b>Create something [art, or craft, or food?]: </b> How do you feel about it? </string>
+    <string name="stress_question">How do you feel about it?</string>
+
+    <!--
     <string name="stress_question_1"><b>Exercise: </b> Moderate exercise can help with anxiety and stress almost immediately, and if you exercise regularly, it can improve mood and energy levels.  Of course, while you are pregnant, you should check with your maternity caregiver, especially if you are starting something new—but even 10 or 15 minutes a day of walking (ideally outside, in the sunlight) can give you a boost.</string>
     <string name="stress_question_2"><b>Mini-break: </b>If you find yourself getting wound up—or just have a few minutes between things—give yourself a mini-break.  Breathe, slowly, and stop:  focus on what is happening now, around you.  Look at a tree, or the sky, or even the lovely symmetry of the steering wheel…just be.  Choose a mantra—some words to say to yourself. </string>
     <string name="stress_question_3"><b>Biofeedback: </b>Practice getting your body to settle down, with some kind of cue (that’s the feedback) about your level of physiological stress (that’s the bio).  With the __ module, it’s showing you your heart rate, so you can see how, when you breathe slowly and settle your thoughts, your body gets settled, too.</string>
@@ -93,7 +119,7 @@
     <string name="stress_question_21"><b>Go outside: </b>For many people, being outside, especially in a natural setting, can lift your mood.  Especially in winter, getting a bit of sun and air can also do wonders for your wellbeing, even if the weather is not the best.</string>
     <string name="stress_question_22"><b>Feed yourself: </b>You (and your baby) need food to live and grow.  Remember to nurture  yourself with healthy, satisfying snacks.  What appeals to you to eat that will give you a moment of satisfaction and soothing, without guilt or worry?</string>
     <string name="stress_question_23"><b>Create something [art, or craft, or food?]: </b>Making something can provide distraction, and the satisfaction of having a tangible product.  Could be sewing or knitting something for the baby, or baking, or drawing or painting or crafting—whatever is your thing.  You might even try something new—take a class, or look it up on the internet.  Trash to treasures?  </string>
-
+    -->
     <!-- other -->
     <string name="title_activity_information">Information</string>
     <string name="title_activity_doing">Exercises &amp; Information</string>
