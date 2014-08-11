@@ -130,10 +130,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="nz.ac.waikato.isdb.BreathingRateActivity" />
         </activity>
-        <activity
-            android:name="nz.ac.waikato.isdb.StrengthReminders"
-            android:label="@string/title_activity_strength_reminders" >
-        </activity>
     </application>
 
 </manifest>

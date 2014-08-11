@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
+import nz.ac.waikato.isdb.assessment.SelfAssessmentActivityResources;
 import nz.ac.waikato.isdb.ui.LikertScale;
 import android.R.integer;
 import android.os.Bundle;
@@ -34,7 +35,7 @@ public class StressReminderActivity extends Activity {
 
 	SharedPreferences pref,pref1;
 	TextView t1,t2,t3;
-	Button random;
+	Button random,activity;
 	String[] reminderText;
 	int visibility;
 	Set<String> set;
@@ -43,7 +44,7 @@ public class StressReminderActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_strength_reminders);
+		setContentView(R.layout.activity_stress_reminders);
 		t1 =(TextView)findViewById(R.id.reminderText1);
 		t2 =(TextView)findViewById(R.id.reminderText2);
 		t3 =(TextView)findViewById(R.id.reminderText3);
@@ -51,23 +52,21 @@ public class StressReminderActivity extends Activity {
 		v2 = findViewById(R.id.view2);
 		reminderText = getResources().getStringArray(R.array.stressreminders);
 		random = (Button)findViewById(R.id.buttonRandom);
-		pref = getSharedPreferences("stress", MODE_PRIVATE);
-		int j=0;
-		for(int i=0;i<numQues;i++)
-		{
-			int val = pref.getInt("like"+i, -1);
 
-			like.put(j,val);
-			j++;
-		}
+		activity = (Button)findViewById(R.id.buttonActivity);
+		activity.setOnClickListener(new OnClickListener(
+				) {
 
-		sortedLike = sortByValues(like);
-		sortedLike = getHighRatedValues(sortedLike);
-		pref1 = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
-		if((pref1.getInt("key1", -1) != -1) && sortedLike.size() > 3)
-			setDefault();
-		else
-			setRandom();
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(getApplicationContext(), StressActivity.class);
+				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(intent);
+
+			}
+		});
+
+
 
 
 		random.setOnClickListener(new OnClickListener() {
@@ -83,8 +82,8 @@ public class StressReminderActivity extends Activity {
 			}
 		});
 
-		
-		
+
+
 	}
 
 	public void setDefault()
@@ -257,8 +256,33 @@ public class StressReminderActivity extends Activity {
 			Map.Entry me2 = (Map.Entry)iterator2.next();
 			Log.d("ashwini key",me2.getKey() + ": ");
 			Log.d("ashwini value"," "+ me2.getValue());
-		}*/
 
+
+		}*/
+		pref = getSharedPreferences("stress", MODE_PRIVATE);
+		int j=0;
+		for(int i=0;i<numQues;i++)
+		{
+			int val = pref.getInt("like"+i, -1);
+
+			like.put(j,val);
+			j++;
+		}
+
+		sortedLike = sortByValues(like);
+		sortedLike = getHighRatedValues(sortedLike);
+		pref1 = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
+		if((pref1.getInt("key1", -1) != -1) && sortedLike.size() > 3)
+			setDefault();
+		else
+			setRandom();
+
+		if(sortedLike.size() == 0)
+			activity.setVisibility(View.VISIBLE);
+		else if(sortedLike.size() > 3)
+			activity.setVisibility(View.INVISIBLE);
+		else if(sortedLike.size()<=3)
+			activity.setVisibility(View.VISIBLE);
 	}
 
 	@SuppressWarnings("unchecked")

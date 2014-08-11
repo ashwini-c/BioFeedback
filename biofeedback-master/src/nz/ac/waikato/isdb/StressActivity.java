@@ -22,6 +22,7 @@ import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.MeasureSpec;
+import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
@@ -69,50 +70,46 @@ public class StressActivity extends Activity {
 		l3.setAdapter(adapter3);
 		l4.setAdapter(adapter4);
 
-		/*l1.setOnTouchListener(new OnTouchListener() {
+		setListViewHeightBasedOnChildren(l1);
+		setListViewHeightBasedOnChildren(l2);
+		setListViewHeightBasedOnChildren(l3);
+		setListViewHeightBasedOnChildren(l4);
+		l1.setOnTouchListener(new OnTouchListener() {
 			// Setting on Touch Listener for handling the touch inside ScrollView
-
-
 			@Override
-			public boolean onTouch(View v, MotionEvent arg1) {
+			public boolean onTouch(View v, MotionEvent event) {
+				// Disallow the touch request for parent scroll on touch of child view
 				v.getParent().requestDisallowInterceptTouchEvent(true);
 				return false;
 			}
 		});
 		l2.setOnTouchListener(new OnTouchListener() {
 			// Setting on Touch Listener for handling the touch inside ScrollView
-
-
 			@Override
-			public boolean onTouch(View v, MotionEvent arg1) {
+			public boolean onTouch(View v, MotionEvent event) {
+				// Disallow the touch request for parent scroll on touch of child view
 				v.getParent().requestDisallowInterceptTouchEvent(true);
 				return false;
 			}
 		});
 		l3.setOnTouchListener(new OnTouchListener() {
 			// Setting on Touch Listener for handling the touch inside ScrollView
-
-
 			@Override
-			public boolean onTouch(View v, MotionEvent arg1) {
+			public boolean onTouch(View v, MotionEvent event) {
+				// Disallow the touch request for parent scroll on touch of child view
 				v.getParent().requestDisallowInterceptTouchEvent(true);
 				return false;
 			}
 		});
 		l4.setOnTouchListener(new OnTouchListener() {
 			// Setting on Touch Listener for handling the touch inside ScrollView
-
-
 			@Override
-			public boolean onTouch(View v, MotionEvent arg1) {
+			public boolean onTouch(View v, MotionEvent event) {
+				// Disallow the touch request for parent scroll on touch of child view
 				v.getParent().requestDisallowInterceptTouchEvent(true);
 				return false;
 			}
-		});*/
-		setListViewHeightBasedOnChildren(l1);
-		setListViewHeightBasedOnChildren(l2);
-		setListViewHeightBasedOnChildren(l3);
-		setListViewHeightBasedOnChildren(l4);
+		});
 
 		l1.setOnItemClickListener(new OnItemClickListener() {
 
@@ -187,6 +184,9 @@ public class StressActivity extends Activity {
 
 			}
 		});
+
+
+
 	}
 
 
@@ -205,7 +205,7 @@ public class StressActivity extends Activity {
 			if(val != -1)
 				l1.getAdapter().getView(val, null, null).setSelected(true);
 			adapter1.notifyDataSetChanged();
-		
+
 
 
 		}*/
@@ -238,11 +238,12 @@ public class StressActivity extends Activity {
 		int totalHeight = 0;
 		View view = null;
 		for (int i = 0; i < listAdapter.getCount(); i++) {
-			view = listAdapter.getView(i, view, listView);
-			if (i == 0)
-				view.setLayoutParams(new ViewGroup.LayoutParams(desiredWidth, LayoutParams.WRAP_CONTENT));
+			view = listAdapter.getView(i, null, listView);
+			//if (i == 0)
+			//view.setLayoutParams(new ViewGroup.LayoutParams(desiredWidth, LayoutParams.WRAP_CONTENT));
 
 			view.measure(desiredWidth, MeasureSpec.UNSPECIFIED);
+			Log.d("ashwini"," height "+ view.getMeasuredHeight());
 			totalHeight += view.getMeasuredHeight();
 		}
 		ViewGroup.LayoutParams params = listView.getLayoutParams();

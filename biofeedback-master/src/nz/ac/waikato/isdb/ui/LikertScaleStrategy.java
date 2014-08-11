@@ -99,7 +99,7 @@ public class LikertScaleStrategy extends LinearLayout implements View.OnClickLis
 		button.setOnClickListener(this);
 		addView(button);
 		buttons.add(button);
-		
+
 	}
 
 	/**
@@ -130,7 +130,6 @@ public class LikertScaleStrategy extends LinearLayout implements View.OnClickLis
 
 	@Override
 	public void onClick(View view) {
-
 		ToggleButton clickedButton = (ToggleButton) view;
 		for (ToggleButton button : buttons) {
 			if (button.equals(clickedButton))
