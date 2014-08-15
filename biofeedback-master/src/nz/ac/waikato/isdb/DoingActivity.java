@@ -41,4 +41,8 @@ public class DoingActivity extends Activity {
 		Intent nextActivity = new Intent(this, StrengthReminderActivity.class);
 		startActivity(nextActivity);
 	}
+	public void startInformation(View view) {
+		Intent nextActivity = new Intent(this, InformationActivity.class);
+		startActivity(nextActivity);
+	}
 }

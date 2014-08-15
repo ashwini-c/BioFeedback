@@ -45,10 +45,7 @@ public class DoingActivityOthers extends Activity {
 		startActivity(nextActivity);
 	}
 
-	public void startInformation(View view) {
-		Intent nextActivity = new Intent(this, InformationActivity.class);
-		startActivity(nextActivity);
-	}
+	
 
 
 }

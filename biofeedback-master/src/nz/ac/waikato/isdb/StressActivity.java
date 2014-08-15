@@ -81,16 +81,54 @@ public class StressActivity extends Activity {
 		l2 = (LinearLayout)findViewById(R.id.options2);
 		l3 = (LinearLayout)findViewById(R.id.options3);
 		l4 = (LinearLayout)findViewById(R.id.options4);
-		
+
 		clickListner = new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				if(!(v.isSelected()))
-					v.setSelected(true);
-				else
-					v.setSelected(false);
+				View parent;
+				switch (v.getId()) {
+				case R.id.textView5:
+				case R.id.editText1:
+					parent = layout.get(0);
+					if(parent.isSelected())
+						parent.setSelected(false);
+					else
+						parent.setSelected(true);
+					break;
+				case R.id.textView13:
+				case R.id.editText2:
+					parent = layout.get(1);
+					if(parent.isSelected())
+						parent.setSelected(false);
+					else
+						parent.setSelected(true);
+					break;
+				case R.id.textView18:
+				case R.id.editText3:
+					parent = layout.get(2);
+					if(parent.isSelected())
+						parent.setSelected(false);
+					else
+						parent.setSelected(true);
+					break;
+				case R.id.textView24:
+				case R.id.editText4:
+					parent = layout.get(3);
+					if(parent.isSelected())
+						parent.setSelected(false);
+					else
+						parent.setSelected(true);
+					break;
+
+				default:
+					if(!(v.isSelected()))
+						v.setSelected(true);
+					else
+						v.setSelected(false);
+					break;
+				}
+
 
 			}
 		};
@@ -98,8 +136,12 @@ public class StressActivity extends Activity {
 		for (TextView txt : text) {
 			txt.setOnClickListener(clickListner);
 		}
-		for (LinearLayout txt : layout) {
-			txt.setOnClickListener(clickListner);
+		for (LinearLayout lay : layout) {
+			lay.setOnClickListener(clickListner);
+		}
+		for(EditText ed : editBtn)
+		{
+			ed.setOnClickListener(clickListner);
 		}
 
 		listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
@@ -223,18 +265,61 @@ public class StressActivity extends Activity {
 		{
 			int val = pref.getInt("like"+i, -1);
 			like.get(i).setValue(val);
+			if(val>2)
+			{
+				switch (i) {
+				case 0:
+					l1.setVisibility(View.VISIBLE);
+					break;
+				case 1:
+					l2.setVisibility(View.VISIBLE);
+					break;
+				case 4:
+					l3.setVisibility(View.VISIBLE);
+					break;
+				case 21:
+					l4.setVisibility(View.VISIBLE);
+					break;
+
+				default:
+					break;
+				}
+			}
 		}
-		/*for(int i =1;i<=4;i++)
+		for(int i=0;i<numText;i++)
 		{
-			int val = pref.getInt("list"+i, -1);
-			Log.d("ashwini", "selected "+ val);
-			if(val != -1)
-				l1.getAdapter().getView(val, null, null).setSelected(true);
-			adapter1.notifyDataSetChanged();
+			boolean sel = pref.getBoolean("text"+i, false); ;
+			switch (i) {
+			case 4:
+
+				layout.get(0).setSelected(sel);
+				break;
+			case 12:
+				layout.get(1).setSelected(sel);			
+				break;
+			case 17:
+				layout.get(2).setSelected(sel);			
+				break;
+			case 23:
+				layout.get(3).setSelected(sel);			
+				break;
+
+			default:
+				text.get(i).setSelected(sel);			
+				break;
+			}
+
+		}
 
 
+		for(int i=0;i<numEdit;i++)
+		{
+			String str = pref.getString("edit"+i, "");
+			Log.d("ashwini","str ===== "+str);
+			editBtn.get(i).setText(str);
 
-		}*/
+		}
+
 	}
 
 	@Override
@@ -250,33 +335,38 @@ public class StressActivity extends Activity {
 			}
 		}
 		pref.edit().putInt("totalStress", total).apply();
-	}
 
-	/**** Method for Setting the Height of the ListView dynamically.
-	 **** Hack to fix the issue of not showing all the items of the ListView
-	 **** when placed inside a ScrollView  ****/
-	public static void setListViewHeightBasedOnChildren(ListView listView) {
-		ListAdapter listAdapter = listView.getAdapter();
-		if (listAdapter == null)
-			return;
+		for(int i=0;i<numText;i++)
+		{
+			switch (i) {
+			case 4:
+				pref.edit().putBoolean("text"+i, layout.get(0).isSelected()).apply();
+				break;
+			case 12:
+				pref.edit().putBoolean("text"+i, layout.get(1).isSelected()).apply();
+				break;
+			case 17:
+				pref.edit().putBoolean("text"+i, layout.get(2).isSelected()).apply();
+				break;
+			case 23:
+				pref.edit().putBoolean("text"+i, layout.get(3).isSelected()).apply();
+				break;
 
-		int desiredWidth = MeasureSpec.makeMeasureSpec(listView.getWidth(), MeasureSpec.UNSPECIFIED);
-		int totalHeight = 0;
-		View view = null;
-		for (int i = 0; i < listAdapter.getCount(); i++) {
-			view = listAdapter.getView(i, null, listView);
-			//if (i == 0)
-			//view.setLayoutParams(new ViewGroup.LayoutParams(desiredWidth, LayoutParams.WRAP_CONTENT));
+			default:
+				pref.edit().putBoolean("text"+i, text.get(i).isSelected()).apply();
+				break;
+			}
 
-			view.measure(desiredWidth, MeasureSpec.UNSPECIFIED);
-			Log.d("ashwini"," height "+ view.getMeasuredHeight());
-			totalHeight += view.getMeasuredHeight();
 		}
-		ViewGroup.LayoutParams params = listView.getLayoutParams();
-		params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
-		listView.setLayoutParams(params);
-		listView.requestLayout();
+
+		for(int i=0;i<numEdit;i++)
+		{
+			String str = editBtn.get(i).getText().toString();
+			pref.edit().putString("edit"+i, str).apply();
+		}
 	}
+
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

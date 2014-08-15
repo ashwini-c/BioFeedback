@@ -21,22 +21,50 @@
         android:gravity="center_vertical"
         android:orientation="vertical" >
 
+        <TextView
+            android:id="@+id/textView"
+            style="@style/purpleBG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="@string/strategy_assessment_text_rate" />
+
         <Button
             android:id="@+id/buttonResources"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@drawable/purple_button"
+            android:gravity="center"
             android:onClick="startAssessment1"
             android:text="@string/assessment1"
             android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/purpleBG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonResources"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="@string/assessment_text" />
 
         <Button
             android:id="@+id/buttonStress"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonResources"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@drawable/purple_button"
@@ -56,7 +84,8 @@
             android:background="@drawable/purple_button"
             android:onClick="startAssessment3"
             android:text="@string/assessment3"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/buttonSubheadingDistress"
@@ -68,7 +97,8 @@
             android:background="@drawable/purple_button"
             android:onClick="startAssessment4"
             android:text="@string/assessment4"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/buttonSubheadingHealthy"
@@ -80,7 +110,8 @@
             android:background="@drawable/purple_button"
             android:onClick="startAssessment5"
             android:text="@string/assessment5"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:visibility="gone" />
     </RelativeLayout>
 
 </RelativeLayout>

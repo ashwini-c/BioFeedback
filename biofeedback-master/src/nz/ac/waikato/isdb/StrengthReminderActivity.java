@@ -78,11 +78,17 @@ public class StrengthReminderActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				if(sortedLike.size() == 0)
+				{
 					Toast.makeText(getApplicationContext(), "Answer Questions in Self Assement to get Strength Reminders", Toast.LENGTH_LONG).show();
+					activity.setVisibility(View.VISIBLE);
+				}
 				else if(sortedLike.size() > 3)
 					setRandom();
 				else if(sortedLike.size()<=3)
+				{
 					Toast.makeText(getApplicationContext(), "Answer more than 3 Questions in Self Assement to randomize Strength Reminders", Toast.LENGTH_LONG).show();
+					activity.setVisibility(View.VISIBLE);
+				}
 			}
 		});
 
@@ -140,7 +146,7 @@ public class StrengthReminderActivity extends Activity {
 					if(k==1)
 					{
 						randomKey = keys.get( random.nextInt(keys.size()) );
-						t1.setText(k+": "+reminderText[randomKey]);
+						t1.setText(reminderText[randomKey]);
 						pref1.edit().putInt("key1", randomKey).apply();
 						numbers.add(randomKey);
 
@@ -160,12 +166,12 @@ public class StrengthReminderActivity extends Activity {
 
 					if(k==2)
 					{
-						t2.setText(k+": "+reminderText[randomKey]);
+						t2.setText(reminderText[randomKey]);
 						pref1.edit().putInt("key2", randomKey).apply();
 					}
 					if(k==3)
 					{
-						t3.setText(k+": "+reminderText[randomKey]);
+						t3.setText(reminderText[randomKey]);
 
 						pref1.edit().putInt("key3", randomKey).apply();
 					}
@@ -193,7 +199,7 @@ public class StrengthReminderActivity extends Activity {
 				Map.Entry me2 = (Map.Entry)iterator2.next();
 				if (k == 1)
 				{
-					t1.setText(k+": "+reminderText[(Integer) me2.getKey()]);
+					t1.setText(reminderText[(Integer) me2.getKey()]);
 					t2.setVisibility(View.GONE);
 					t3.setVisibility(View.GONE);
 					v1.setVisibility(View.GONE);
@@ -206,7 +212,7 @@ public class StrengthReminderActivity extends Activity {
 					t3.setVisibility(View.GONE);
 					v1.setVisibility(View.VISIBLE);
 					v2.setVisibility(View.GONE);
-					t2.setText(k+": "+reminderText[(Integer) me2.getKey()]);
+					t2.setText(reminderText[(Integer) me2.getKey()]);
 				}
 				else if (k == 3)
 				{
@@ -214,7 +220,7 @@ public class StrengthReminderActivity extends Activity {
 					t3.setVisibility(View.VISIBLE);
 					v1.setVisibility(View.VISIBLE);
 					v2.setVisibility(View.VISIBLE);
-					t3.setText(k+": "+reminderText[(Integer) me2.getKey()]);
+					t3.setText(reminderText[(Integer) me2.getKey()]);
 				}
 				k++;
 			}
@@ -302,12 +308,10 @@ public class StrengthReminderActivity extends Activity {
 		else
 			setRandom();
 
-		if(sortedLike.size() == 0)
-			activity.setVisibility(View.VISIBLE);
-		else if(sortedLike.size() > 3)
+		
+		 if(sortedLike.size() > 3)
 			activity.setVisibility(View.INVISIBLE);
-		else if(sortedLike.size()<=3)
-			activity.setVisibility(View.VISIBLE);
+		
 
 	}
 
