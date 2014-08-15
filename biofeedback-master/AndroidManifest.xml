@@ -21,13 +21,13 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
 
-            <!--
+            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
+            
         </activity>
 
         <!-- Main -->
@@ -95,11 +95,7 @@
             android:label="@string/strategy_subheading"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
             >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.DoingActivity"
