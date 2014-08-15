@@ -62,14 +62,126 @@
                 android:background="@drawable/bar_plus_minus1"
                 android:orientation="horizontal"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp" />
+                android:paddingTop="10dp" >
+            </nz.ac.waikato.isdb.ui.LikertScaleStrategy>
 
-            <ListView
-                android:id="@+id/listView1"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" >
-            </ListView>
+            <LinearLayout
+                android:id="@+id/options1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/textSubheading"
+                    style="@style/purpleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/listheading1" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/purpleBGList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list1text1" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list1text2" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list1text3" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list1text4" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <LinearLayout
+                    android:id="@+id/edit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/drop_down_list_item"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        style="@style/purpleBGListEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/list1text5" />
+
+                    <EditText
+                        android:id="@+id/editText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10" >
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textText2"
@@ -91,12 +203,171 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp" />
 
-            <ListView
-                android:id="@+id/listView2"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" >
-            </ListView>
+            <LinearLayout
+                android:id="@+id/options2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/textSubheading"
+                    style="@style/purpleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/listheading2" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    style="@style/purpleBGList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list2text1" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list2text2" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list2text3" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list2text4" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list2text5" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list2text6" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list2text7" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <LinearLayout
+                    android:id="@+id/edit2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/drop_down_list_item"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        style="@style/purpleBGListEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/list2text8" />
+
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10" >
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textText3"
@@ -158,12 +429,123 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp" />
 
-            <ListView
-                android:id="@+id/listView3"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" >
-            </ListView>
+            <LinearLayout
+                android:id="@+id/options3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/textSubheading"
+                    style="@style/purpleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/listheading3" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    style="@style/purpleBGList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list3text1" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list3text2" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list3text3" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list3text4" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <LinearLayout
+                    android:id="@+id/edit3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/drop_down_list_item"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        style="@style/purpleBGListEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/list3text5" />
+
+                    <EditText
+                        android:id="@+id/editText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10" >
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textText6"
@@ -505,12 +887,139 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp" />
 
-            <ListView
-                android:id="@+id/listView4"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" >
-            </ListView>
+            <LinearLayout
+                android:id="@+id/options4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/textSubheading"
+                    style="@style/purpleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/listheading4" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    style="@style/purpleBGList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list4text1" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list4text2" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list4text3" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list4text4" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    style="@style/purpleBGList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/list4text5" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/darkPurple" />
+
+                <LinearLayout
+                    android:id="@+id/edit4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/drop_down_list_item"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        style="@style/purpleBGListEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/list4text6" />
+
+                    <EditText
+                        android:id="@+id/editText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10" >
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textText23"

@@ -1,6 +1,7 @@
 package nz.ac.waikato.isdb.ui;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -18,6 +19,7 @@ import java.util.List;
 public class LikertScaleStrategy extends LinearLayout implements View.OnClickListener {
 	/** return value if no button has been pressed */
 	static int NO_SELECTION = -1;
+	SharedPreferences pref;
 
 	/** all toggle buttons of this Likert scale */
 	List<ToggleButton> buttons;
@@ -41,7 +43,7 @@ public class LikertScaleStrategy extends LinearLayout implements View.OnClickLis
 		Context ctxt = getContext();
 		if (ctxt == null)
 			return;
-
+		pref = ctxt.getSharedPreferences("stress", ctxt.MODE_PRIVATE);
 		buttons = new ArrayList<ToggleButton>();
 
 		//--A1--
@@ -130,12 +132,16 @@ public class LikertScaleStrategy extends LinearLayout implements View.OnClickLis
 
 	@Override
 	public void onClick(View view) {
+		Log.d("ashwini "," clickkk ");
+
+
 		ToggleButton clickedButton = (ToggleButton) view;
 		for (ToggleButton button : buttons) {
 			if (button.equals(clickedButton))
 				continue;
 			button.setChecked(false);
 		}
+		pref.edit().putString("buttonClick", getValue()+","+getId()).apply();
 	}
 
 	/**

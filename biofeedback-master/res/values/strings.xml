@@ -144,5 +144,33 @@
     <string name="assessment_text1">Everyone has stress.  There are lots of healthy ways to manage stress, but not all of them will be right for you.  This is a menu of different options for coping with stress—some you will have tried, some not—some will work for you, some not.  For now, just go through and rate each option, to create your personalized menu of stress busters.</string>
     <string name="strategy_assessment_text_rate">Everyone has stress.  There are lots of healthy ways to manage stress, but not all of them will be right for you.  This is a menu of different options for coping with stress—some you will have tried, some not—some will work for you, some not.  For now, just go through and rate each option, to create your personalized menu of stress busters.</string>
     <string name="title_activity_strength_reminders">Strength Reminders</string>
+    <string name="listheading1">What type of exercise is most helpful when you’re stressed?</string>
+    <string name="listheading2">What do you want to say to yourself when you’re taking a break?  Here are some suggestions, or you can write your own.</string>
+    <string name="listheading3">What type of music do you enjoy the most? </string>
+    <string name="listheading4">What appeals to you to eat that will give you a moment of satisfaction and soothing, without guilt or worry?</string>
+    <string name="list1text1">Walking</string>
+    <string name="list1text2">Running</string>
+    <string name="list1text3">Swimming</string>
+    <string name="list1text4">Biking</string>
+    <string name="list1text5">Fill in:</string>
+    <string name="list2text1">I am ok—I have what I need to manage this</string>
+    <string name="list2text2">Remember what is important!</string>
+    <string name="list2text3">Simplicity, patience, compassion</string>
+    <string name="list2text4">Just keep going...</string>
+    <string name="list2text5">Breathe.  Breathe again.  Keep breathing</string>
+    <string name="list2text6">I am not alone</string>
+    <string name="list2text7">Love is growing inside of me</string>
+    <string name="list2text8">write your own :</string>
+    <string name="list3text1">Relaxing music</string>
+    <string name="list3text2">Upbeat music</string>
+    <string name="list3text3">Music to move the job along…</string>
+    <string name="list3text4">Sing!</string>
+    <string name="list3text5">Play instrument of your choice :</string>
+    <string name="list4text1">Fruit:  an apple, orange, banana…something convenient and sweet.</string>
+    <string name="list4text2">Cheese:  a bit of safe (hard cheese, or soft processed/pasteurised cheeses like cottage cheese, cream cheese) cheese, with crackers or bread or fruit</string>
+    <string name="list4text3">Chocolate:  a reasonable amount of good, dark chocolate, good for body and soul</string>
+    <string name="list4text4">Nuts:  a small handful of nuts, maybe with some raisins or other dried fruit, can soothe the ravenous beast at times…</string>
+    <string name="list4text5">Popcorn: crunchy snack for an evening at home…</string>
+    <string name="list4text6">Your ideas: </string>
 
 </resources>
