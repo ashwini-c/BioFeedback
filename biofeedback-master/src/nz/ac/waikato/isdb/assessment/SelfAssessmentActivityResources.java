@@ -17,7 +17,7 @@ import nz.ac.waikato.isdb.R;
 import nz.ac.waikato.isdb.StressActivity;
 
 public class SelfAssessmentActivityResources extends Activity {
-	int totalQues = 42;
+	int totalQues = 43;
 	SharedPreferences pref;
 	int total = 0;
 	ProgressBar progressBar ;

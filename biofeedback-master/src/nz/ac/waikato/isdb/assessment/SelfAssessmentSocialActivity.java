@@ -15,8 +15,8 @@ import nz.ac.waikato.isdb.ui.LikertScale;
 
 public class SelfAssessmentSocialActivity extends Activity {
 	ArrayList<LikertScale> like = new ArrayList<LikertScale>();
-	int ids[] = {R.id.likert1,R.id.likert2,R.id.likert3,R.id.likert4,R.id.likert5,R.id.likert6,R.id.likert7,R.id.likert8,R.id.likert9,R.id.likert10,R.id.likert11,R.id.likert12,R.id.likert13,R.id.likert14};
-	int numQues =14;
+	int ids[] = {R.id.likert1,R.id.likert2,R.id.likert3,R.id.likert4,R.id.likert5,R.id.likert6,R.id.likert7,R.id.likert8,R.id.likert9,R.id.likert10,R.id.likert11,R.id.likert12,R.id.likert13,R.id.likert13};
+	int numQues =13;
 	SharedPreferences pref;
 
 	@Override

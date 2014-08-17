@@ -291,7 +291,7 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp" />
 
-            <TextView
+            <!-- <TextView
                 android:id="@+id/textText14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -308,7 +308,7 @@
                 android:layout_gravity="center"
                 android:orientation="horizontal"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp" />
+                android:paddingTop="10dp" /> -->
         </LinearLayout>
     </ScrollView>
 

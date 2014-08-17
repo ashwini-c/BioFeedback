@@ -13,105 +13,110 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     -->
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:gravity="center_vertical"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/textView"
-            style="@style/purpleBG"
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="10dp"
-            android:text="@string/strategy_assessment_text_rate" />
-
-        <Button
-            android:id="@+id/buttonResources"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/purple_button"
-            android:gravity="center"
-            android:onClick="startAssessment1"
-            android:text="@string/assessment1"
-            android:textColor="@color/white" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/textView1"
-            style="@style/purpleBG"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonResources"
-            android:layout_marginTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="10dp"
-            android:text="@string/assessment_text" />
+            <TextView
+                android:id="@+id/textView"
+                style="@style/purpleBG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/strength_intro" />
 
-        <Button
-            android:id="@+id/buttonStress"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView1"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/purple_button"
-            android:onClick="startAssessment2"
-            android:singleLine="false"
-            android:text="@string/assessment2"
-            android:textColor="@color/white"
-            android:width="270dp" />
+            <Button
+                android:id="@+id/buttonResources"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/purple_button"
+                android:gravity="center"
+                android:onClick="startAssessment1"
+                android:text="@string/assessment1"
+                android:textColor="@color/white" />
 
-        <Button
-            android:id="@+id/buttonSubheadingStrategies"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonStress"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/purple_button"
-            android:onClick="startAssessment3"
-            android:text="@string/assessment3"
-            android:textColor="@color/white"
-            android:visibility="gone" />
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/purpleBG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonResources"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/stress_intro" />
 
-        <Button
-            android:id="@+id/buttonSubheadingDistress"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonSubheadingStrategies"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/purple_button"
-            android:onClick="startAssessment4"
-            android:text="@string/assessment4"
-            android:textColor="@color/white"
-            android:visibility="gone" />
+            <Button
+                android:id="@+id/buttonStress"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/purple_button"
+                android:onClick="startAssessment2"
+                android:singleLine="false"
+                android:text="@string/strategy_subheading"
+                android:textColor="@color/white"
+                android:width="270dp" />
 
-        <Button
-            android:id="@+id/buttonSubheadingHealthy"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonSubheadingDistress"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/purple_button"
-            android:onClick="startAssessment5"
-            android:text="@string/assessment5"
-            android:textColor="@color/white"
-            android:visibility="gone" />
-    </RelativeLayout>
+            <Button
+                android:id="@+id/buttonSubheadingStrategies"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonStress"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/purple_button"
+                android:onClick="startAssessment3"
+                android:text="@string/assessment3"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/buttonSubheadingDistress"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonSubheadingStrategies"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/purple_button"
+                android:onClick="startAssessment4"
+                android:text="@string/assessment4"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/buttonSubheadingHealthy"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonSubheadingDistress"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/purple_button"
+                android:onClick="startAssessment5"
+                android:text="@string/assessment5"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

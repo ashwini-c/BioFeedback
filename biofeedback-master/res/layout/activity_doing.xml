@@ -2,17 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
     android:orientation="vertical"
     android:weightSum="1"
     tools:context=".DoingActivity" >
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.36"
-        android:padding="5dp"
-        android:text="Everyone has stress.  There are lots of healthy ways to manage stress, but not all of them will be right for you.  This is a menu of different options for coping with stress—some you will have tried, some not—some will work for you, some not.  " />
+ 
 
     <Button
         android:id="@+id/buttonStrengthReminders"

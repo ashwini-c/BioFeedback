@@ -32,7 +32,7 @@ public class StrengthReminderActivity extends Activity {
 
 	int numQuesPhy =4;
 	int numQuesInt =8;
-	int numQuesSoc =14;
+	int numQuesSoc =13;
 	int numQuesInd =16;
 	HashMap< Integer, Integer> like = new HashMap<Integer, Integer>();
 	HashMap< Integer, Integer> sortedLike = new HashMap<Integer, Integer>();
