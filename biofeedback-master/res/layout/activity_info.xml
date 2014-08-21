@@ -6,63 +6,38 @@
     android:gravity="center_vertical"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/welcome"
-        style="@style/purple"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:text="@string/welcome_welcome"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="40sp"
-        android:textStyle="bold|italic" />
-
-    <TextView
-        android:id="@+id/welcome_text"
-        style="@style/purple"
-        android:layout_width="258dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="@string/welcome_heading" />
-
     <Button
-        android:id="@+id/buttonSelfAssessment"
+        android:id="@+id/information_text1"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:background="@drawable/purple_button"
-        android:onClick="startSelfAssessment"
-        android:text="@string/title_activity_self_assessment"
+        android:text="@string/information_text1"
         android:textColor="@color/white"
         android:width="270dp" />
 
     <Button
-        android:id="@+id/buttonDoing"
+        android:id="@+id/information_text2"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:background="@drawable/purple_button"
-        android:onClick="startDoing"
         android:singleLine="false"
-        android:text="@string/title_activity_doing"
+        android:text="@string/information_text3"
         android:textColor="@color/white"
         android:width="270dp" />
 
     <Button
-        android:id="@+id/ButtonInformation"
+        android:id="@+id/information_text3"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:background="@drawable/purple_button"
         android:enabled="true"
-        android:onClick="startInformation"
-        android:text="@string/title_activity_information"
+        android:text="@string/information_text5"
         android:textColor="@color/white"
         android:width="270dp" />
 

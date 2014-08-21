@@ -20,8 +20,10 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -57,7 +59,7 @@ public class StrengthReminderActivity extends Activity {
 		reminderText = getResources().getStringArray(R.array.reminders);
 		random = (Button)findViewById(R.id.buttonRandom);
 		activity = (Button)findViewById(R.id.buttonActivity);
-		
+
 
 
 		activity.setOnClickListener(new OnClickListener(
@@ -308,10 +310,10 @@ public class StrengthReminderActivity extends Activity {
 		else
 			setRandom();
 
-		
-		 if(sortedLike.size() > 3)
+
+		if(sortedLike.size() > 3)
 			activity.setVisibility(View.INVISIBLE);
-		
+
 
 	}
 
@@ -340,7 +342,54 @@ public class StrengthReminderActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.information, menu);
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		SharedPreferences pref;
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			// This ID represents the Home or Up button. In the case of this
+			// activity, the Up button is shown. Use NavUtils to allow users
+			// to navigate up one level in the application structure. For
+			// more details, see the Navigation pattern on Android Design:
+			//
+			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
+			//
+			NavUtils.navigateUpFromSameTask(this);
+			return true;
+		case R.id.action_settings:
+			pref = getSharedPreferences("stress", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("physical", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("intellectual", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("social", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("individual", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("randomstrings", MODE_PRIVATE);
+			pref.edit().clear().commit();
+
+			ResetAll();
+			return true;
+		case R.id.action_about:
+			Intent intent = new Intent(getApplicationContext(),AboutUsActivity.class);
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(intent);
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	private void ResetAll()
+	{
+		finish();
+		Intent intent = getIntent();
+		intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+		startActivity(intent);
 	}
 }

@@ -8,41 +8,55 @@ import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-public class InformationActivity extends Activity {
+public class InfoActivity extends Activity {
 
+	Button b1,b2,b3;
 
-	TextView t1,t2;
+	OnClickListener listner;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_information);
+		setContentView(R.layout.activity_info);
+		b1 = (Button)findViewById(R.id.information_text1);
+		b2 = (Button)findViewById(R.id.information_text2);
+		b3 = (Button)findViewById(R.id.information_text3);
+		listner = new OnClickListener() {
 
-		Intent intent = getIntent();
+			@Override
+			public void onClick(View v) {
 
-		int button = intent.getIntExtra("button",-1);
+				Intent intent = new Intent(getApplicationContext(), InformationActivity.class);
 
-		switch (button) {
-		case 1:
-			t1 =(TextView)findViewById(R.id.textHeading1);
-			t2 = (TextView)findViewById(R.id.textView1);
-			break;
-		case 2:
-			t1 =(TextView)findViewById(R.id.textHeading2);
-			t2 = (TextView)findViewById(R.id.textView2);
-			break;
-		case 3:
-			t1 =(TextView)findViewById(R.id.textHeading3);
-			t2 = (TextView)findViewById(R.id.textView3);
-			break;
 
-		default:
-			break;
-		}
-		t1.setVisibility(View.VISIBLE);
-		t2.setVisibility(View.VISIBLE);
+				switch (v.getId()) {
+				case R.id.information_text1:
+					intent.putExtra("button", 1);
+					break;
+				case R.id.information_text2:
+					intent.putExtra("button", 2);
+					break;
+				case R.id.information_text3:
+					intent.putExtra("button", 3);
+					break;
+
+				default:
+					break;
+				}
+				startActivity(intent);
+
+			}
+		};
+		
+		b1.setOnClickListener(listner);
+		b2.setOnClickListener(listner);
+		b3.setOnClickListener(listner);
 	}
+
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -91,4 +105,6 @@ public class InformationActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
 }

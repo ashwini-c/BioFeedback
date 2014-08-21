@@ -2,12 +2,14 @@
 <resources>
 
     <!-- General -->
-    <string name="app_name">BioFeedBack</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Positively Pregnancy</string>
+    <string name="action_settings">Reset</string>
+    <string name="action_about">About Us</string>
     <string name="hello_world">Hello world!</string>
 
     <!-- Main -->
     <string name="welcome_welcome">Welcome</string>
+    <string name="welcome_heading">Some questions will assess your strengths and then we recommend activities for your well-being.</string>
     <string name="welcome_text">For the most personalised experience, take some time to answer a few configuration questions in the self assessment </string>
     <string name="welcome_text_part2">.. or just get going with some exercises.</string>
     <string name="welcome_welcome_middle">Welcome back</string>
@@ -121,7 +123,7 @@
     -->
     <!-- other -->
     <string name="title_activity_information">Information</string>
-    <string name="title_activity_doing">Exercises &amp; Information</string>
+    <string name="title_activity_doing">Activities</string>
     <string name="title_activity_self_assessment">Self Assessment</string>
     <string name="title_activity_breathing_rate">Breathing Rate</string>
     <string name="title_activity_breathing_instructions">Breathing Instructions</string>
@@ -142,9 +144,11 @@
     <string name="assessment_heading1">Stress Management</string>
     <string name="assessment_text1">Everyone has stress.  There are lots of healthy ways to manage stress, but not all of them will be right for you.  This is a menu of different options for coping with stress—some you will have tried, some not—some will work for you, some not.  For now, just go through and rate each option, to create your personalized menu of stress busters.</string>
     <string name="strategy_assessment_text_rate">Everyone has stress.  There are lots of healthy ways to manage stress, but not all of them will be right for you.  This is a menu of different options for coping with stress—some you will have tried, some not—some will work for you, some not.  For now, just go through and rate each option, to create your personalized menu of stress busters.</string>
-    <string name="stress_intro">Different things work for different people.  In this assessment, you will see a range of options—things that work for some people to relax and manage stress.  You’ll rate how effective each one is, or might be, for you.  After you’ve completed this self-assessment, you can access “Tools for Wellbeing”-personalised ideas to help you manage stress and stay healthy. If you are feeling stressed, or just have a few minutes to take care of yourself, choose “Tools for Wellbeing” for ideas of what you might do.</string>
-    <string name="strength_intro">We all have different areas of strength, and different types of resources that support us in times of challenge and stress.  This assessment will help to identify what you see as your strengths, and the people and things you can rely on to support you.  After you’ve completed this self-assessment, you can access “Strength Reminders”—reminders of what your strengths are, and how you can use those to build your resilience.</string>
+    <string name="activity_intro">Here are some options for activities that might enhance your well-being</string>
+    <string name="stress_intro"><b>Different things work for different people.</b>  In this assessment, you will see a range of options—things that work for some people to relax and manage stress.  You’ll rate how effective each one is, or might be, for you.  \nAfter you’ve completed this self-assessment, you can access “Tools for Wellbeing”-personalised ideas to help you manage stress and stay healthy. If you are feeling stressed, or just have a few minutes to take care of yourself, choose “Tools for Wellbeing” for ideas of what you might do.</string>
+    <string name="strength_intro"><b>We all have different areas of strength,</b> and different types of resources that support us in times of challenge and stress.  This assessment will help to identify what you see as your strengths, and the people and things you can rely on to support you.  \nAfter you’ve completed this self-assessment, you can access “Strength Reminders”—reminders of what your strengths are, and how you can use those to build your resilience.</string>
     <string name="title_activity_strength_reminders">Strength Reminders</string>
+    <string name="title_activity_stress_reminders">Strategy Suggestions</string>
     <string name="listheading1">What type of exercise is most helpful when you’re stressed?</string>
     <string name="listheading2">What do you want to say to yourself when you’re taking a break?  Here are some suggestions, or you can write your own.</string>
     <string name="listheading3">What type of music do you enjoy the most? </string>
@@ -153,7 +157,7 @@
     <string name="list1text2">Running</string>
     <string name="list1text3">Swimming</string>
     <string name="list1text4">Biking</string>
-    <string name="list1text5">Fill in:</string>
+    <string name="list1text5">Other Exercises:</string>
     <string name="list2text1">I am ok—I have what I need to manage this</string>
     <string name="list2text2">Remember what is important!</string>
     <string name="list2text3">Simplicity, patience, compassion</string>
@@ -161,7 +165,7 @@
     <string name="list2text5">Breathe.  Breathe again.  Keep breathing</string>
     <string name="list2text6">I am not alone</string>
     <string name="list2text7">Love is growing inside of me</string>
-    <string name="list2text8">write your own :</string>
+    <string name="list2text8">Write your own :</string>
     <string name="list3text1">Relaxing music</string>
     <string name="list3text2">Upbeat music</string>
     <string name="list3text3">Music to move the job along…</string>
@@ -173,8 +177,8 @@
     <string name="list4text4">Nuts:  a small handful of nuts, maybe with some raisins or other dried fruit, can soothe the ravenous beast at times…</string>
     <string name="list4text5">Popcorn: crunchy snack for an evening at home…</string>
     <string name="list4text6">Your ideas: </string>
-    <string name="information_text1">What is stress?</string>
-    <string name="information_text2">People use the word “stress” to mean two things (at least):  one is the things that happen in life that are challenging in one way or another—what we might call “life stress” or stressors.   Most of the time people talk about hard things as stress:  losing a job, or breaking up a relationship, or too much work.  Good things also create stress, though:  getting married, moving house, having a baby—you can probably relate to how all of those things add up and create a sense of pressure, or challenge, or…stress.  A reasonable amount of life stress is fine—it’s part of being engaged, of living a full life.  But too much can put you on overload, and lead to the second way of talking about stress.
+    <string name="information_text1">What is Stress?</string>
+    <string name="information_text2"><b>People use the word “stress” to mean two things (at least):</b>  one is the things that happen in life that are challenging in one way or another—what we might call “life stress” or stressors.   Most of the time people talk about hard things as stress:  losing a job, or breaking up a relationship, or too much work.  Good things also create stress, though:  getting married, moving house, having a baby—you can probably relate to how all of those things add up and create a sense of pressure, or challenge, or…stress.  A reasonable amount of life stress is fine—it’s part of being engaged, of living a full life.  But too much can put you on overload, and lead to the second way of talking about stress.
 	\n\nThat second meaning of stress comes into play when people say “I’m stressed out!” or “Too much stress!”.  This is using “stress” as a word to describe a feeling, and a set of reactions to things that are happening.  It’s really a set of things we feel—maybe physical tension, worry, frustration, butterflies, maybe sadness or disappointment all tangled up together in a bundle.  
 	\n\nHow you react—now much stress you feel—in response to any particular stressor (say, moving house) depends on how well you feel you can cope—whether there are things you can do to manage, what kinds of resources you have to help you, and what’s going on around you—how much else you have to deal with.
 	\n\nSuppose you are moving house in two weeks.  You are six months pregnant.  Scenario one:  You have stopped work; your partner is still working, but he’s home by six every day, and he plans to take a week off before the move.  Your family lives nearby, and you’re having a big packing up party this weekend; you have hired a cleaner to come in after you’re out and clean the old place the day after you’re out. Your partner’s workmates are all coming over on moving day, with a van.  You’ve been planning the baby’s bedroom, and have nearly all the furniture.  Your partner is going to go in and paint the room before you move in.  You’re excited about the new house, and looking forward to planting a garden.  Yes, it’s stressful, but mostly in an exciting, moving forward sort of way.
@@ -182,15 +186,15 @@
 \n\nSame stressor:  moving house.  It makes a big difference, though, what you think and feel about it, and what support you have.  If you have people around you can rely on, and financial and practical resources, the move was your choice, and you have steps to take to manage the process, it’s all OK.  If you’re on your own—practically and emotionally—and feeling overwhelmed, it feels like STRESS!
 \n\nThere are things you can do to break down and manage that stress—that is what this program is all about.  For right now, the point is just that what feels like stress depends on the circumstances.  Stressors—even hard, sad stressors, like a divorce or bereavement—don’t automatically translate into overload.  But even what some people might see as small stressors (what we’re not supposed to sweat) can blow up into overwhelming roadblocks if the circumstances (external and internal) are all wrong.
 \n\nFor now, we will call the stuff that happens “stressors”, and how we react “stress”.  </string>
-    <string name="information_text3">Stress and the body</string>
-    <string name="information_text4">One part of your response to stressors is firmly physiological—It’s your body’s built-in response to emergency.  The body responds to our modern-day emergencies (yikes, I forgot to pay the Visa bill) using the same old system that was built for scary emergencies (yikes, a tiger!).  It’s sometimes called the “fight or flight” reaction, or the “fight, flight, or freeze” reaction—that last reaction, to freeze, is sometimes forgotten, but may be especially pertinent when we are feeling helpless or out of control.
+    <string name="information_text3">Stress and The Body</string>
+    <string name="information_text4"><b>One part of your response to stressors is firmly physiological—</b>It’s your body’s built-in response to emergency.  The body responds to our modern-day emergencies (yikes, I forgot to pay the Visa bill) using the same old system that was built for scary emergencies (yikes, a tiger!).  It’s sometimes called the “fight or flight” reaction, or the “fight, flight, or freeze” reaction—that last reaction, to freeze, is sometimes forgotten, but may be especially pertinent when we are feeling helpless or out of control.
 	\n\nIn the ‘fight or flight’ part of the response, once some part of your brain (really quickly, at a subconscious level) thinks there is an emergency going on—in other words, stressors overloading your resources—your old-fashioned stress response system starts working to help you survive the tiger attack.  Your autonomic nervous system—an automatic response—revs up, and usually, the sympathetic branch of that system pumps up to prepare you to get out of the way.  Your heart rate increases, your blood pressure goes up, your muscles tense and your pupils dilate—all to help you in your desperate dash, or cornered fight, with the tiger.  Some parts of your system that are not essential to immediate escape—digestion, immune system, the ability to attend to small details—are shut down.  In the jungle, this all happened really quickly, and the danger either did you in or passed within a matter of minutes.  So, too, your stress response—it would have all been over by the time you finished reading this paragraph.
 	\n\nThe ‘freeze’ or, sometimes called ‘fright’ response, is a bit different—for creatures in situations where they cannot fight or run—like a cornered possum—there may be a chance of survival if you go limp—immobile, but still alert.  Playing dead, but not consciously—automatically, like when we say we were ‘paralyzed’ with fear.  You are physically frozen, but mentally all systems are still go.  In some people, in some situations, there may be another reaction:  to faint, and go completely limp and unconscious.  This response, which seems to be inherited, is more common among women and children, and some argue that it may have helped us survive in prehistoric times, for example, when non-combatants were threatened in the midst of battle.  In any case, all of these stress responses have in common that they cause big physiological changes in your body, and start a cascade of hormonal reactions, all of which are meant to help us survive in the moment.
 	\n\nWith our modern stressors, though, the moment is often really, really long, in biological terms.  These stressors—changing jobs, buying a house, losing a loved one—are not really what the system was developed for, and the physiological changes that might help in the jungle emergency don’t really help us when they go on for days or weeks.  In fact, they often hurt us—you need your gastrointestinal system and your immune system to be working.  
 	\n\nThe stress response system is really complicated, and fascinating—if you are interested in more details on how it works, see some of the resources listed below.  The take-home message for the moment, though, is that it makes sense that we have a response to stress, but that response can backfire when we’re exposed to stressors and keep on stressing.  This is even more the case in pregnancy, because there are two people’s systems involved, and interacting, and the stress hormones play an even more complicated role in pregnancy.
 	\n\nYou may have heard, then, that stress is bad for you in pregnancy—yikes, don’t stress!  Yes, too much stress may have a negative effect in pregnancy—that’s the whole reason for this app—but there is no magic line that says THIS IS TOO MUCH!  We all have stress, and pregnant women in particular are in a time of change and anticipation…that’s stress.  It’s okay.  What matters is finding the steps you can take to manage the things that are stressors for you—finding your own resources, supports, ways of coping, and understanding your own tigers.  You might find that some of them can be tamed, and some aren’t really that interested in eating you, after all.  Even if there is a stressor that won’t go away, figuring out the things you can do to take care of yourself, and to counteract your mind and body’s automatic emergency reactions, can make a difference.</string>
-    <string name="information_text5">Coping with stress</string>
-    <string name="information_text6">This is what this app is all about—making choices, feeling you have a choice—finding out where your choices are, what your resources are, what you can do.  The more you can notice the choices you have, the more you feel in control, and can get yourself onto a virtuous cycle—the opposite of a vicious cycle.  If you can see your options, and make choices about what you can do to keep yourself healthy and steady, then you are more likely to notice the things that are going well, and other things you can do to keep yourself on an even keel.  If you start to feel you have no choice—paralyzed, frozen, helpless—that’s when you might especially need a reminder of the many different things that might just help.  
+    <string name="information_text5">Coping with Stress</string>
+    <string name="information_text6"><b>This is what this app is all about—making choices,</b> feeling you have a choice—finding out where your choices are, what your resources are, what you can do.  The more you can notice the choices you have, the more you feel in control, and can get yourself onto a virtuous cycle—the opposite of a vicious cycle.  If you can see your options, and make choices about what you can do to keep yourself healthy and steady, then you are more likely to notice the things that are going well, and other things you can do to keep yourself on an even keel.  If you start to feel you have no choice—paralyzed, frozen, helpless—that’s when you might especially need a reminder of the many different things that might just help.  
 	\n\nStress is everywhere—millions…billions…of people have been muddling through life for generations, and we have actually come up with some pretty good ways of dealing with stress.  Lots and lots of ways, and different ones will work well for different people, for different stressors.  If one doesn’t work, there are others to try.  There is no one best way to cope with your situation—there are dozens of possible ways; it may take some trial and error to find what works for you.
 	\n\nOne way different strategies of coping with stress have been described is by splitting them into “emotion-focused” strategies and “problem-focused” strategies.  Problem-focused strategies are those that focus on the problem—often something outside yourself—and try different things to solve it.  For example, if you are not sleeping, you might confront the problem head-on:  learn about sleep hygiene, and make sure your sleeping environment is the best it can be.  If your partner snores, try earplugs.  Poke him.  Consult a doctor about why he’s snoring.  Cut out caffeine after 5:00 pm.  Get one of those giant pillows and use it to support your growing belly.
  	\n\nEmotion-focused strategies centre on changing how you feel and think.  If you are worrying about not sleeping, you might try to distract yourself by listening to music.  You might vent your frustration about your partner’s snoring to a sympathetic friend, or write about your worries to try to get them out of your head before bed.  
@@ -203,5 +207,6 @@
 \n\n\n\nReferences:  
 \n\nBracha, H. Stefan. 2004. Freeze, flight, fight, fright, faint:  Adaptationist perspectives on acute stress response spectrum.  CNS Spectrums, 9, 679-685.
 \n\nSapolsky, R. 2004) Why zebras don’t get ulcers.  …	</string>
+    <string name="title_activity_about_us">AboutUsActivity</string>
 
 </resources>

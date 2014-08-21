@@ -79,7 +79,7 @@
 
                 <TextView
                     android:id="@+id/textSubheading"
-                    style="@style/purpleSubHeading"
+                    style="@style/purpleSubHeadingList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="10dp"
@@ -104,7 +104,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -123,7 +123,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -141,7 +141,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -159,7 +159,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <LinearLayout
                     android:id="@+id/edit1"
@@ -229,7 +229,7 @@
 
                 <TextView
                     android:id="@+id/textSubheading"
-                    style="@style/purpleSubHeading"
+                    style="@style/purpleSubHeadingList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="10dp"
@@ -255,7 +255,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -274,7 +274,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView8"
@@ -292,7 +292,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView9"
@@ -310,7 +310,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView10"
@@ -328,7 +328,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -346,7 +346,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView12"
@@ -364,7 +364,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <LinearLayout
                     android:id="@+id/edit2"
@@ -473,7 +473,7 @@
 
                 <TextView
                     android:id="@+id/textSubheading"
-                    style="@style/purpleSubHeading"
+                    style="@style/purpleSubHeadingList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="10dp"
@@ -499,7 +499,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView15"
@@ -518,7 +518,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView16"
@@ -536,7 +536,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView17"
@@ -554,7 +554,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <LinearLayout
                     android:id="@+id/edit3"
@@ -943,7 +943,7 @@
 
                 <TextView
                     android:id="@+id/textSubheading"
-                    style="@style/purpleSubHeading"
+                    style="@style/purpleSubHeadingList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="10dp"
@@ -969,7 +969,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView20"
@@ -988,7 +988,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView21"
@@ -1006,7 +1006,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView22"
@@ -1024,7 +1024,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <TextView
                     android:id="@+id/textView23"
@@ -1042,7 +1042,7 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@color/darkPurple" />
+                    android:background="@android:color/transparent" />
 
                 <LinearLayout
                     android:id="@+id/edit4"

@@ -4,17 +4,19 @@ import java.util.ArrayList;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import nz.ac.waikato.isdb.AboutUsActivity;
 import nz.ac.waikato.isdb.R;
 import nz.ac.waikato.isdb.ui.LikertScale;
 
 public class SelfAssessmentIntellectualActivity extends Activity {
-	
+
 	ArrayList<LikertScale> like = new ArrayList<LikertScale>();
 	int ids[] = {R.id.likert1,R.id.likert2,R.id.likert3,R.id.likert4,R.id.likert5,R.id.likert6,R.id.likert7,R.id.likert8};
 	int numQues =8;
@@ -34,7 +36,7 @@ public class SelfAssessmentIntellectualActivity extends Activity {
 	}
 	@Override
 	protected void onResume() {
-				super.onResume();
+		super.onResume();
 		for(int i=0;i<numQues;i++)
 		{
 			int val = pref.getInt("like"+i, -1);
@@ -70,12 +72,13 @@ public class SelfAssessmentIntellectualActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.self_assessment, menu);
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		SharedPreferences pref;
 		switch (item.getItemId()) {
 		case android.R.id.home:
 			// This ID represents the Home or Up button. In the case of this
@@ -87,8 +90,37 @@ public class SelfAssessmentIntellectualActivity extends Activity {
 			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
+		case R.id.action_settings:
+			pref = getSharedPreferences("stress", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("physical", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("intellectual", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("social", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("individual", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("randomstrings", MODE_PRIVATE);
+			pref.edit().clear().commit();
+
+			ResetAll();
+			return true;
+		case R.id.action_about:
+			Intent intent = new Intent(getApplicationContext(),AboutUsActivity.class);
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(intent);
+			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
+	private void ResetAll()
+	{
+		finish();
+		Intent intent = getIntent();
+		intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+		startActivity(intent);
+	}
 }

@@ -14,21 +14,30 @@
     -->
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/textView"
-                style="@style/purpleBG"
+                android:id="@+id/textSubheading"
+                style="@style/purpleSubHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/title_activity_self_assessment" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/purple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:paddingBottom="10dp"
                 android:paddingLeft="20dp"
@@ -40,8 +49,6 @@
                 android:id="@+id/buttonResources"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView"
-                android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/purple_button"
@@ -52,10 +59,9 @@
 
             <TextView
                 android:id="@+id/textView1"
-                style="@style/purpleBG"
+                style="@style/purple"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/buttonResources"
                 android:layout_marginTop="20dp"
                 android:paddingBottom="10dp"
                 android:paddingLeft="20dp"
@@ -67,10 +73,9 @@
                 android:id="@+id/buttonStress"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView1"
-                android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/purple_button"
                 android:onClick="startAssessment2"
                 android:singleLine="false"
@@ -82,7 +87,6 @@
                 android:id="@+id/buttonSubheadingStrategies"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/buttonStress"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/purple_button"
@@ -95,7 +99,6 @@
                 android:id="@+id/buttonSubheadingDistress"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/buttonSubheadingStrategies"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/purple_button"
@@ -108,7 +111,6 @@
                 android:id="@+id/buttonSubheadingHealthy"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/buttonSubheadingDistress"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/purple_button"
@@ -116,7 +118,7 @@
                 android:text="@string/assessment5"
                 android:textColor="@color/white"
                 android:visibility="gone" />
-        </RelativeLayout>
+        </LinearLayout>
     </ScrollView>
 
 </RelativeLayout>

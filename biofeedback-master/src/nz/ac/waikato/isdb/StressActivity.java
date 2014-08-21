@@ -16,14 +16,18 @@ import nz.ac.waikato.isdb.ui.LikertScaleStrategy;
 import android.R.string;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.MeasureSpec;
 import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
@@ -39,6 +43,7 @@ import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 
 public class StressActivity extends Activity {
 
@@ -87,6 +92,7 @@ public class StressActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				View parent;
+				Log.d("ashwini", "clcik  "+ v.getClass());
 				switch (v.getId()) {
 				case R.id.textView5:
 				case R.id.editText1:
@@ -142,6 +148,53 @@ public class StressActivity extends Activity {
 		for(EditText ed : editBtn)
 		{
 			ed.setOnClickListener(clickListner);
+
+			ed.setOnFocusChangeListener(new OnFocusChangeListener() {
+
+				@Override
+				public void onFocusChange(View v, boolean arg1) {
+
+					View parent;
+					switch (v.getId()) {
+
+					case R.id.editText1:
+						parent = layout.get(0);
+						if(parent.isSelected())
+							parent.setSelected(false);
+						else
+							parent.setSelected(true);
+						break;
+
+					case R.id.editText2:
+						parent = layout.get(1);
+						if(parent.isSelected())
+							parent.setSelected(false);
+						else
+							parent.setSelected(true);
+						break;
+
+					case R.id.editText3:
+						parent = layout.get(2);
+						if(parent.isSelected())
+							parent.setSelected(false);
+						else
+							parent.setSelected(true);
+						break;
+
+					case R.id.editText4:
+						parent = layout.get(3);
+						if(parent.isSelected())
+							parent.setSelected(false);
+						else
+							parent.setSelected(true);
+						break;
+
+					default:
+
+						break;
+					}
+				}
+			});
 		}
 
 		listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
@@ -366,12 +419,51 @@ public class StressActivity extends Activity {
 		}
 	}
 
-
-
+	private void ResetAll()
+	{
+		finish();
+		Intent intent = getIntent();
+		intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+		startActivity(intent);
+	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.information, menu);
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.action_settings:
+			pref = getSharedPreferences("stress", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("physical", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("intellectual", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("social", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("individual", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("randomstrings", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			ResetAll();
+
+
+			return true;
+		case R.id.action_about:
+			Intent intent = new Intent(getApplicationContext(),AboutUsActivity.class);
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(intent);
+			return true;
+
+		default:
+			break;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 }

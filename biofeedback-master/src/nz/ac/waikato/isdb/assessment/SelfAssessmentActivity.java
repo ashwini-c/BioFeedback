@@ -13,6 +13,7 @@ import android.os.Build;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import nz.ac.waikato.isdb.AboutUsActivity;
 import nz.ac.waikato.isdb.R;
 import nz.ac.waikato.isdb.StressActivity;
 
@@ -40,12 +41,14 @@ public class SelfAssessmentActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.self_assessment, menu);
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		SharedPreferences pref;
+
 		switch (item.getItemId()) {
 		case android.R.id.home:
 			// This ID represents the Home or Up button. In the case of this
@@ -57,6 +60,28 @@ public class SelfAssessmentActivity extends Activity {
 			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
+		case R.id.action_settings:
+			pref = getSharedPreferences("stress", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("physical", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("intellectual", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("social", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("individual", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			pref = getSharedPreferences("randomstrings", MODE_PRIVATE);
+			pref.edit().clear().commit();
+			return true;
+		case R.id.action_about:
+			Intent intent = new Intent(getApplicationContext(),AboutUsActivity.class);
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(intent);
+			return true;
+
 		}
 		return super.onOptionsItemSelected(item);
 	}

@@ -20,24 +20,21 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
-
-            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            
         </activity>
 
         <!-- Main -->
         <activity
             android:name="nz.ac.waikato.isdb.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/welcome_welcome" >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.assessment.SelfAssessmentActivity"
-            android:label="@string/title_activity_self_assessment"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
         </activity>
         <activity
@@ -74,7 +71,13 @@
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.InformationActivity"
-            android:label="@string/title_activity_strength_reminders"
+            android:label="@string/title_activity_information"
+            android:parentActivityName="nz.ac.waikato.isdb.InfoActivity" >
+            >
+        </activity>
+        <activity
+            android:name="nz.ac.waikato.isdb.InfoActivity"
+            android:label="@string/title_activity_information"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
             >
         </activity>
@@ -86,7 +89,7 @@
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.StressReminderActivity"
-            android:label="@string/title_activity_strength_reminders"
+            android:label="@string/title_activity_stress_reminders"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
             >
         </activity>
@@ -95,7 +98,6 @@
             android:label="@string/strategy_subheading"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
             >
-            
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.DoingActivity"
@@ -133,6 +135,10 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="nz.ac.waikato.isdb.BreathingRateActivity" />
+        </activity>
+        <activity
+            android:name="nz.ac.waikato.isdb.AboutUsActivity"
+            android:label="@string/title_activity_about_us" >
         </activity>
     </application>
 
