@@ -6,6 +6,7 @@
     <string name="action_settings">Reset</string>
     <string name="action_about">About Us</string>
     <string name="hello_world">Hello world!</string>
+    <string name="back">&lt;&lt;&lt; BACK</string>
 
     <!-- Main -->
     <string name="welcome_welcome">Welcome</string>

@@ -37,16 +37,18 @@ public class StressReminderActivity extends Activity {
 
 	SharedPreferences pref,pref1;
 	TextView t1,t2,t3;
-	Button random,activity;
+	Button random,activity,back;
 	String[] reminderText;
 	int visibility;
 	Set<String> set;
 	View v1,v2;
+	int key=0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_stress_reminders);
+		pref1 = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
 		t1 =(TextView)findViewById(R.id.reminderText1);
 		t2 =(TextView)findViewById(R.id.reminderText2);
 		t3 =(TextView)findViewById(R.id.reminderText3);
@@ -54,6 +56,7 @@ public class StressReminderActivity extends Activity {
 		v2 = findViewById(R.id.view2);
 		reminderText = getResources().getStringArray(R.array.stressreminders);
 		random = (Button)findViewById(R.id.buttonRandom);
+		back = (Button)findViewById(R.id.buttonBack);
 
 		activity = (Button)findViewById(R.id.buttonActivity);
 		activity.setOnClickListener(new OnClickListener(
@@ -68,20 +71,58 @@ public class StressReminderActivity extends Activity {
 			}
 		});
 
+		back.setOnClickListener(new OnClickListener() {
 
+			@Override
+			public void onClick(View v) {
+				if(sortedLike.size() > 3)
+				{
+
+					Log.d("ashwini.next","k value "+key);
+					key--;
+					pref1.edit().putInt("keys", key).apply();
+					setRandom();
+					if(key == 0)
+					{
+						back.setVisibility(View.GONE);
+					}
+					if(key < sortedLike.size()-3)
+					{
+						random.setVisibility(View.VISIBLE);
+					}
+
+				}
+				else if(sortedLike.size()<=3)
+				{
+					Toast.makeText(getApplicationContext(), "Answer more than 3 Questions in Self Assessment to get more Strategy Suggestions", Toast.LENGTH_LONG).show();
+					activity.setVisibility(View.VISIBLE);
+				}
+			}
+		});
 
 
 		random.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				if(sortedLike.size() == 0)
+				if(sortedLike.size() > 3)
 				{
-					//Toast.makeText(getApplicationContext(), "Answer Questions in Self Assessment to get Strategy Suggestions", Toast.LENGTH_LONG).show();
-					activity.setVisibility(View.VISIBLE);
-				}
-				else if(sortedLike.size() > 3)
+
+					Log.d("ashwini.next","k value "+key);
+					key++;
+					pref1.edit().putInt("keys", key).apply();
 					setRandom();
+					if(key == sortedLike.size()-3)
+					{
+						random.setVisibility(View.GONE);
+					}
+					if(key > 0)
+					{
+						back.setVisibility(View.VISIBLE);
+					}
+
+
+				}
 				else if(sortedLike.size()<=3)
 				{
 					Toast.makeText(getApplicationContext(), "Answer more than 3 Questions in Self Assessment to get more Strategy Suggestions", Toast.LENGTH_LONG).show();
@@ -96,9 +137,12 @@ public class StressReminderActivity extends Activity {
 
 	public void setDefault()
 	{
-		t1.setText(reminderText[pref1.getInt("key1", -1)]);
-		t2.setText(reminderText[pref1.getInt("key2", -1)]);
-		t3.setText(reminderText[pref1.getInt("key3", -1)]);
+
+		int k = pref1.getInt("keys", -1);
+		List<Integer> keys      = new ArrayList<Integer>(sortedLike.keySet());
+		t1.setText(reminderText[keys.get( k )]);
+		t2.setText(reminderText[keys.get( k+1)]);
+		t3.setText(reminderText[keys.get( k+2)]);
 	}
 
 	public void setRandom()
@@ -135,52 +179,15 @@ public class StressReminderActivity extends Activity {
 			while(iterator2.hasNext()) {
 				if(k<=3)
 				{
-					Map.Entry me2 = (Map.Entry)iterator2.next();
-
-					//t1.setText(t1.getText()+ " \n"+k+": "+reminderText[(Integer) me2.getKey()]);
-
-
-
+					Log.d("ashwini.loop","k value "+key);
 					List<Integer> keys      = new ArrayList<Integer>(sortedLike.keySet());
 					if(k==1)
-					{
-						randomKey = keys.get( random.nextInt(keys.size()) );
-						t1.setText(reminderText[randomKey]);
-						pref1.edit().putInt("key1", randomKey).apply();
-						numbers.add(randomKey);
-
-					}
-					else{
-						randomKey = keys.get( random.nextInt(keys.size()) );
-						while(true)
-						{
-							if(numbers.contains(randomKey))
-								randomKey = keys.get( random.nextInt(keys.size()) );
-							else{
-								numbers.add(randomKey);
-								break;
-							}
-						}
-					}
-
+						t1.setText(reminderText[keys.get( key )]);
 					if(k==2)
-					{
-						t2.setText(reminderText[randomKey]);
-						pref1.edit().putInt("key2", randomKey).apply();
-					}
+						t2.setText(reminderText[keys.get( key+1 )]);
 					if(k==3)
-					{
-						t3.setText(reminderText[randomKey]);
-
-						pref1.edit().putInt("key3", randomKey).apply();
-					}
-					int       value     = sortedLike.get(randomKey);
-					Log.d("ashwiniii key",randomKey + ": ");
-					//t1.setText(t1.getText()+ " \n"+k+": "+reminderText[randomKey]);
+						t3.setText(reminderText[keys.get( key+2 )]);
 					k=k+1;
-					Log.d("ashwiniii value"," "+ value);
-
-
 				}
 				else{
 					Log.d("ashwini key","break");
@@ -248,26 +255,7 @@ public class StressReminderActivity extends Activity {
 		super.onResume();
 
 
-		// testing values
-		/*Log.d("ashwini","Before Sorting:");
-		Set set = like.entrySet();
-		Iterator iterator = set.iterator();
-		while(iterator.hasNext()) {
-			Map.Entry me = (Map.Entry)iterator.next();
-			Log.d("ashwini key",me.getKey() + ": ");
-			Log.d("ashwini value"," "+ me.getValue());
-		}
-		//Map<Integer, String> map = sortByValues(hmap); 
-		Log.d("ashwini","After Sorting:");
-		Set set2 = sortedLike.entrySet();
-		Iterator iterator2 = set2.iterator();
-		while(iterator2.hasNext()) {
-			Map.Entry me2 = (Map.Entry)iterator2.next();
-			Log.d("ashwini key",me2.getKey() + ": ");
-			Log.d("ashwini value"," "+ me2.getValue());
 
-
-		}*/
 		pref = getSharedPreferences("stress", MODE_PRIVATE);
 		int j=0;
 		for(int i=0;i<numQues;i++)
@@ -280,23 +268,44 @@ public class StressReminderActivity extends Activity {
 
 		sortedLike = sortByValues(like);
 		sortedLike = getHighRatedValues(sortedLike);
-		pref1 = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
-		if((pref1.getInt("key1", -1) != -1) && sortedLike.size() > 3)
-			setDefault();
+		if((pref1.getInt("keys", -1) == -1) &&(sortedLike.size() != pref1.getInt("sortedarraylen", -1)) )
+			key =0;
 		else
-			setRandom();
-
-
+			key = pref1.getInt("keys", -1);
 		random.setVisibility(View.VISIBLE);
+		back.setVisibility(View.VISIBLE);
 		if(sortedLike.size() == 0)
 		{
 			//Toast.makeText(getApplicationContext(), "Answer Questions in Self Assessment to get Strategy Suggestions", Toast.LENGTH_LONG).show();
 			activity.setVisibility(View.VISIBLE);
 			random.setVisibility(View.GONE);
+			back.setVisibility(View.GONE);
 		}
 		else if(sortedLike.size() > 3)
 			activity.setVisibility(View.INVISIBLE);
 
+		int k = pref1.getInt("keys", -1);
+		Log.d("ashwini.next","k value "+k + " sorted size "+sortedLike.size());
+		if(k == sortedLike.size()-3)
+		{
+			random.setVisibility(View.GONE);
+		}
+		if(k == 0)
+		{
+			back.setVisibility(View.GONE);
+		}
+		if((pref1.getInt("keys", -1) != -1) && sortedLike.size() > 3 && (sortedLike.size() == pref1.getInt("sortedarraylen", -1)))
+			setDefault();
+		else
+			setRandom();
+
+	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		pref1.edit().putInt("sortedarraylen", sortedLike.size()).apply();
 	}
 
 	@SuppressWarnings("unchecked")
