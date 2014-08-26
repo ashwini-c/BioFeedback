@@ -81,14 +81,14 @@ public class StrengthReminderActivity extends Activity {
 			public void onClick(View v) {
 				if(sortedLike.size() == 0)
 				{
-					Toast.makeText(getApplicationContext(), "Answer Questions in Self Assement to get Strength Reminders", Toast.LENGTH_LONG).show();
+					//Toast.makeText(getApplicationContext(), "Answer Questions in Self Assessment to get Strength Reminders", Toast.LENGTH_LONG).show();
 					activity.setVisibility(View.VISIBLE);
 				}
 				else if(sortedLike.size() > 3)
 					setRandom();
 				else if(sortedLike.size()<=3)
 				{
-					Toast.makeText(getApplicationContext(), "Answer more than 3 Questions in Self Assement to randomize Strength Reminders", Toast.LENGTH_LONG).show();
+					Toast.makeText(getApplicationContext(), "Answer more than 3 Questions in Self Assessment to get more Strength Reminders", Toast.LENGTH_LONG).show();
 					activity.setVisibility(View.VISIBLE);
 				}
 			}
@@ -123,7 +123,8 @@ public class StrengthReminderActivity extends Activity {
 		Iterator iterator2 = set.iterator();
 		if(sortedLike.size() == 0)
 		{
-			t1.setText("Answer Questions in Self Assement to get Strength Reminders");
+			t1.setText("Answer Questions in Self Assessment to get Strength Reminders");
+			activity.setVisibility(View.VISIBLE);
 			t2.setVisibility(View.GONE);
 			t3.setVisibility(View.GONE);
 			v1.setVisibility(View.GONE);
@@ -310,9 +311,16 @@ public class StrengthReminderActivity extends Activity {
 		else
 			setRandom();
 
-
-		if(sortedLike.size() > 3)
+		random.setVisibility(View.VISIBLE);
+		if(sortedLike.size() == 0)
+		{
+			//Toast.makeText(getApplicationContext(), "Answer Questions in Self Assessment to get Strategy Suggestions", Toast.LENGTH_LONG).show();
+			activity.setVisibility(View.VISIBLE);
+			random.setVisibility(View.GONE);
+		}
+		else if(sortedLike.size() > 3)
 			activity.setVisibility(View.INVISIBLE);
+
 
 
 	}

@@ -2,7 +2,7 @@
 <resources>
 
     <!-- General -->
-    <string name="app_name">Positively Pregnancy</string>
+    <string name="app_name">Positively Pregnant</string>
     <string name="action_settings">Reset</string>
     <string name="action_about">About Us</string>
     <string name="hello_world">Hello world!</string>
@@ -54,7 +54,7 @@
     <string name="social_question_10"><b>Sensitivity:</b> Are you attuned to the feelings and reactions of others, as well as your own?</string>
     <string name="social_question_11"><b>Forgiveness:</b> Do you forgive others when they have done something that hurt you, or went against your values?</string>
     <string name="social_question_12"><b>Leadership:</b> Are you the sort of person who can take the lead in a group and inspire people to work together and accomplish their goals?</string>
-    <string name="social_question_13"><b>Affection:</b>Are you a person who can express your love and affection easily and openly, telling people you care and showing your love?</string>
+    <string name="social_question_13"><b>Affection:</b> Are you a person who can express your love and affection easily and openly, telling people you care and showing your love?</string>
     <string name="individual_question_1"><b>Persistence/perseverance:</b> Do you keep on going, pushing through problems, no matter what?</string>
     <string name="individual_question_2"><b>Faith:</b> Do you have faith in the way the world works, whether in formal religion or a personal spiritual understanding?</string>
     <string name="individual_question_3"><b>Sense of humour:</b> Can you see the humour in life, both finding it yourself and appreciating the humour of others? </string>
