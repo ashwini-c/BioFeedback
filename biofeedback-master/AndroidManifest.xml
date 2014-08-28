@@ -17,6 +17,7 @@
         <!-- Splash screen -->
         <activity
             android:name="nz.ac.waikato.isdb.SplashScreen"
+            android:icon="@drawable/biofeedback_logo"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
@@ -30,90 +31,106 @@
         <!-- Main -->
         <activity
             android:name="nz.ac.waikato.isdb.MainActivity"
-            android:label="@string/welcome_welcome" >
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name" >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.assessment.SelfAssessmentActivity"
+            android:icon="@drawable/circle_purple"
             android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.assessment.SelfAssessmentActivityResources"
-            android:label="@string/assessment1"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.assessment.SelfAssessmentActivity" >
         </activity>
         <!-- Self assessment -->
         <activity
             android:name="nz.ac.waikato.isdb.assessment.SelfAssessmentPhysicalActivity"
-            android:label="@string/physical_subheading"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.assessment.SelfAssessmentActivity" >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.assessment.SelfAssessmentIntellectualActivity"
-            android:label="@string/intellectual_subheading"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.assessment.SelfAssessmentActivity" >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.assessment.SelfAssessmentSocialActivity"
-            android:label="@string/social_subheading"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.assessment.SelfAssessmentActivity" >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.assessment.SelfAssessmentIndividualActivity"
-            android:label="@string/individual_subheading"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.assessment.SelfAssessmentActivity" >
         </activity>
         <!-- other -->
         <activity
             android:name="nz.ac.waikato.isdb.breathing.BreathingRateActivity"
-            android:label="@string/title_activity_breathing_rate"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.InformationActivity"
-            android:label="@string/title_activity_information"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.InfoActivity" >
             >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.InfoActivity"
-            android:label="@string/title_activity_information"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
             >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.StrengthReminderActivity"
-            android:label="@string/title_activity_strength_reminders"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
             >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.StressReminderActivity"
-            android:label="@string/title_activity_stress_reminders"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
             >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.StressActivity"
-            android:label="@string/strategy_subheading"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
             >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.DoingActivity"
-            android:label="@string/title_activity_doing"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.MainActivity" >
             >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.DoingActivityOthers"
-            android:label="@string/title_activity_doing"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.DoingActivity" >
             >
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.breathing.BreathingInstructionsActivity"
-            android:label="@string/title_activity_breathing_instructions"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.breathing.BreathingRateActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -121,7 +138,8 @@
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.breathing.BreathingMeasureActivity"
-            android:label="@string/title_activity_breathing_measure"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.breathing.BreathingRateActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -129,7 +147,8 @@
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.breathing.BreathingLearnActivity"
-            android:label="@string/title_activity_breathing_learn"
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name"
             android:parentActivityName="nz.ac.waikato.isdb.breathing.BreathingRateActivity"
             android:screenOrientation="landscape" >
             <meta-data
@@ -138,7 +157,8 @@
         </activity>
         <activity
             android:name="nz.ac.waikato.isdb.AboutUsActivity"
-            android:label="@string/title_activity_about_us" >
+            android:icon="@drawable/circle_purple"
+            android:label="@string/app_name" >
         </activity>
     </application>
 

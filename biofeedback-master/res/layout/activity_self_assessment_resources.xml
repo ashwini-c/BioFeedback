@@ -24,7 +24,7 @@
 
             <TextView
                 android:id="@+id/textHeading"
-                style="@style/purple"
+                style="@style/purpleSubHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
@@ -69,7 +69,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
                     android:indeterminate="false"
-                    android:max="42"
+                    android:max="41"
                     android:minHeight="50dp"
                     android:minWidth="200dp"
                     android:progress="1"

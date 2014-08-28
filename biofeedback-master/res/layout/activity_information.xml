@@ -16,7 +16,7 @@
 
             <TextView
                 android:id="@+id/textHeading1"
-                style="@style/purple"
+                style="@style/purpleSubHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
@@ -40,7 +40,7 @@
 
             <TextView
                 android:id="@+id/textHeading2"
-                style="@style/purple"
+                style="@style/purpleSubHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
@@ -64,7 +64,7 @@
 
             <TextView
                 android:id="@+id/textHeading3"
-                style="@style/purple"
+                style="@style/purpleSubHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"

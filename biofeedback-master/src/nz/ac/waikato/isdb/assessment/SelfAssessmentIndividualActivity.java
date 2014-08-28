@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -11,7 +14,9 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import nz.ac.waikato.isdb.AboutUsActivity;
+import nz.ac.waikato.isdb.MainActivity;
 import nz.ac.waikato.isdb.R;
 import nz.ac.waikato.isdb.ui.LikertScale;
 
@@ -91,22 +96,49 @@ public class SelfAssessmentIndividualActivity extends Activity {
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
 		case R.id.action_settings:
-			pref = getSharedPreferences("stress", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("physical", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("intellectual", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("social", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("individual", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("randomstrings", MODE_PRIVATE);
-			pref.edit().clear().commit();
+			Builder dialog = new AlertDialog.Builder(this);
+			dialog.setTitle("Reset");
+			dialog.setMessage("Are you sure?");
+			dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
-			ResetAll();
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					SharedPreferences pref;
+					pref = getSharedPreferences("stress", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("physical", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("intellectual", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("social", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("individual", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("randomstrings", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					for(int i=0;i<numQues;i++)
+					{
+						int val = pref.getInt("like"+i, -1);
+						like.get(i).setValue(val);
+					}
+					Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+					intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+					startActivity(intent1);
+
+				}
+			});
+			dialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					dialog.cancel();
+
+				}
+			});
+			dialog.show();
 			return true;
 		case R.id.action_about:
 			Intent intent = new Intent(getApplicationContext(),AboutUsActivity.class);
@@ -116,11 +148,8 @@ public class SelfAssessmentIndividualActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	private void ResetAll()
+	public void actionDone(View view)
 	{
 		finish();
-		Intent intent = getIntent();
-		intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-		startActivity(intent);
 	}
 }

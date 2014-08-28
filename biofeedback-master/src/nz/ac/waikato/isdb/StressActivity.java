@@ -16,6 +16,10 @@ import nz.ac.waikato.isdb.ui.LikertScaleStrategy;
 import android.R.string;
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
@@ -35,6 +39,7 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
@@ -147,6 +152,23 @@ public class StressActivity extends Activity {
 		}
 		for(EditText ed : editBtn)
 		{
+			ed.setOnEditorActionListener(new OnEditorActionListener() {
+
+				@Override
+				public boolean onEditorAction(TextView v, int actionId,
+						KeyEvent event) {
+					if (event != null&& (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
+						InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+						in.hideSoftInputFromWindow(v.getApplicationWindowToken(),
+								InputMethodManager.HIDE_NOT_ALWAYS);
+
+						return true;
+
+					}
+					return false;
+				}
+			});
+
 			ed.setOnClickListener(clickListner);
 
 			ed.setOnFocusChangeListener(new OnFocusChangeListener() {
@@ -301,6 +323,8 @@ public class StressActivity extends Activity {
 
 	}
 
+
+
 	public void SlideToUp(final LinearLayout rl_footer) {
 		Animation hide = AnimationUtils.loadAnimation(this, R.anim.fadeup);
 		rl_footer.startAnimation(hide);
@@ -419,13 +443,7 @@ public class StressActivity extends Activity {
 		}
 	}
 
-	private void ResetAll()
-	{
-		finish();
-		Intent intent = getIntent();
-		intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-		startActivity(intent);
-	}
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -437,22 +455,49 @@ public class StressActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.action_settings:
-			pref = getSharedPreferences("stress", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("physical", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("intellectual", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("social", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("individual", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("randomstrings", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			ResetAll();
+			Builder dialog = new AlertDialog.Builder(this);
+			dialog.setTitle("Reset");
+			dialog.setMessage("Are you sure?");
+			dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					SharedPreferences pref;
+					pref = getSharedPreferences("stress", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("physical", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("intellectual", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("social", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("individual", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("randomstrings", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					for(int i=0;i<numQues;i++)
+					{
+						int val = pref.getInt("like"+i, -1);
+						like.get(i).setValue(val);
+					}
+					Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+					intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+					startActivity(intent1);
+
+				}
+			});
+			dialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					dialog.cancel();
+
+				}
+			});
+			dialog.show();
 
 			return true;
 		case R.id.action_about:
@@ -465,5 +510,9 @@ public class StressActivity extends Activity {
 			break;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	public void actionDone(View view)
+	{
+		finish();
 	}
 }

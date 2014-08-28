@@ -6,13 +6,25 @@
     android:gravity="center_vertical"
     android:orientation="vertical" >
 
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:gravity="center_horizontal"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/biofeedback_logo" />
+
     <TextView
         android:id="@+id/welcome"
         style="@style/purple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:text="@string/welcome_welcome"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="40sp"
@@ -21,7 +33,7 @@
     <TextView
         android:id="@+id/welcome_text"
         style="@style/purple"
-        android:layout_width="258dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"

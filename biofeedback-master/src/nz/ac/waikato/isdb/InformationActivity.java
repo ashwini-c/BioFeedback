@@ -2,6 +2,9 @@ package nz.ac.waikato.isdb;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.app.NavUtils;
@@ -66,21 +69,44 @@ public class InformationActivity extends Activity {
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
 		case R.id.action_settings:
-			pref = getSharedPreferences("stress", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("physical", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("intellectual", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("social", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("individual", MODE_PRIVATE);
-			pref.edit().clear().commit();
-			pref = getSharedPreferences("randomstrings", MODE_PRIVATE);
-			pref.edit().clear().commit();
+			Builder dialog = new AlertDialog.Builder(this);
+			dialog.setTitle("Reset");
+			dialog.setMessage("Are you sure?");
+			dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					SharedPreferences pref;
+					pref = getSharedPreferences("stress", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("randomstringsstress", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("physical", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("intellectual", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("social", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("individual", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					pref = getSharedPreferences("randomstrings", MODE_PRIVATE);
+					pref.edit().clear().commit();
+					Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+					intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+					startActivity(intent1);
+
+				}
+			});
+			dialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					dialog.cancel();
+
+				}
+			});
+			dialog.show();
 
 			return true;
 		case R.id.action_about:

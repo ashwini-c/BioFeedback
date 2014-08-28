@@ -31,7 +31,7 @@
         <item name="android:textSize">16sp</item>
     </style>
     <!-- infotext in purple. -->
-    <style name="purpleBG" parent="@android:style/TextAppearance.Small">
+    <style name="purpleBG" parent="@style/MediumSmall">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">#668F5E99</item>
