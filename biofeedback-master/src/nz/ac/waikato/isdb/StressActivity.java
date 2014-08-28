@@ -35,6 +35,7 @@ import android.view.View.OnFocusChangeListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
@@ -97,6 +98,14 @@ public class StressActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				View parent;
+				Log.d("ashwini", "clcik  " + (v instanceof EditText));
+				if(!(v instanceof EditText))
+				{
+
+					InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+					in.hideSoftInputFromWindow(v.getApplicationWindowToken(),
+							InputMethodManager.HIDE_NOT_ALWAYS);
+				}
 				Log.d("ashwini", "clcik  "+ v.getClass());
 				switch (v.getId()) {
 				case R.id.textView5:
@@ -152,22 +161,6 @@ public class StressActivity extends Activity {
 		}
 		for(EditText ed : editBtn)
 		{
-			ed.setOnEditorActionListener(new OnEditorActionListener() {
-
-				@Override
-				public boolean onEditorAction(TextView v, int actionId,
-						KeyEvent event) {
-					if (event != null&& (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
-						InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-						in.hideSoftInputFromWindow(v.getApplicationWindowToken(),
-								InputMethodManager.HIDE_NOT_ALWAYS);
-
-						return true;
-
-					}
-					return false;
-				}
-			});
 
 			ed.setOnClickListener(clickListner);
 
@@ -175,7 +168,7 @@ public class StressActivity extends Activity {
 
 				@Override
 				public void onFocusChange(View v, boolean arg1) {
-
+					Log.d("ashwini "," onFocusChange "+ arg1);
 					View parent;
 					switch (v.getId()) {
 

@@ -20,6 +20,7 @@
     <string name="welcome_welcome_top">Welcome, NAME</string>
     <string name="welcome_text_top">You can adjust your configuration here </string>
     <string name="welcome_text_part2_top">.. or do some recommended exercises.</string>
+    <string name="infoText">Here are some brief articles about psychological well-being and pregnancy.</string>
 
     <!-- assessment -->
     <string name="assessment1">Strengths</string>
@@ -209,7 +210,6 @@
 \n\n\n\n<b>References:</b>\n\n<b>Bracha, H. Stefan.</b> 2004. Freeze, flight, fight, fright, faint:  Adaptationist perspectives on acute stress response spectrum.  CNS Spectrums, 9, 679-685.
 \n\n<b>Sapolsky, R.</b> 2004 Why zebras don’t get ulcers.  …	</string>
     <string name="title_activity_about_us">About</string>
-    
     <string name="abouts"><b>Positively Pregnant</b> was developed to support women’s psychological wellbeing in the transition to motherhood.  The development team includes:
 \n\nCarrie Cornsweet Barber, School of Psychology, University of Waikato (ccbarber@waikato.ac.nz)
 \n\nAnnika Hinze, School of Computer Science, University of Waikato (annika.hinze@gmail.com)

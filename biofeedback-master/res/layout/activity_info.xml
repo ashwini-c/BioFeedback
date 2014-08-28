@@ -22,6 +22,16 @@
         android:gravity="center"
         android:orientation="vertical" >
 
+        <TextView
+            android:id="@+id/welcome_text"
+            style="@style/purple"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/infoText" />
+
         <Button
             android:id="@+id/information_text1"
             android:layout_width="220dp"
